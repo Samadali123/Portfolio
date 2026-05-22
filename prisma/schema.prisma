@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Contact {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  fullName    String   @db.VarChar(120)
+  email       String   @db.VarChar(180)
+  phone       String   @default("") @db.VarChar(40)
+  companyName String   @default("") @db.VarChar(160)
+  message     String   @db.VarChar(3000)
+  status      String   @default("new") @db.VarChar(40)
+  source      String   @default("website-contact-form") @db.VarChar(120)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([createdAt])
+  @@map("contacts")
+}
+
+model Consultation {
+  id                  String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  fullName            String   @default("") @db.VarChar(120)
+  email               String   @db.VarChar(180)
+  phone               String   @default("") @db.VarChar(40)
+  serviceInterestedIn String   @db.VarChar(120)
+  preferredDate       String   @db.VarChar(80)
+  preferredTime       String   @db.VarChar(40)
+  projectDescription  String   @default("") @db.VarChar(3000)
+  status              String   @default("new") @db.VarChar(40)
+  source              String   @default("website-consultation-form") @db.VarChar(120)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@index([createdAt])
+  @@index([serviceInterestedIn])
+  @@map("consultations")
+}
+
+model Application {
+  id             String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  fullName       String   @db.VarChar(120)
+  email          String   @db.VarChar(180)
+  college        String   @db.VarChar(180)
+  graduationYear String   @db.VarChar(20)
+  role           String   @db.VarChar(120)
+  experience     String   @db.VarChar(80)
+  portfolio      String   @default("") @db.VarChar(500)
+  github         String   @default("") @db.VarChar(500)
+  resumeFileName String   @db.VarChar(220)
+  resumeMimeType String   @db.VarChar(80)
+  resumeSize     Int
+  resumeData     Bytes
+  status         String   @default("new") @db.VarChar(40)
+  source         String   @default("website-talent-pool-form") @db.VarChar(120)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([createdAt])
+  @@index([role])
+  @@map("applications")
+}
+
+model Admin {
+  id                     String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  fullName               String    @db.VarChar(120)
+  email                  String    @unique @db.VarChar(180)
+  passwordHash           String
+  role                   String    @default("admin") @db.VarChar(40)
+  resetPasswordTokenHash String    @default("")
+  resetPasswordExpiresAt DateTime?
+  lastLoginAt            DateTime?
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+
+  @@map("admins")
+}

@@ -1,0 +1,200 @@
+:root {
+  /* --color-primary: #D9E7D9; */
+  --color-primary : #d3d3d3;
+  --color-secondary: #0A5737;
+  --color-secondary-soft: rgba(10, 87, 55, 0.12);
+  --color-secondary-fade: rgba(10, 87, 55, 0.06);
+  --color-bg: #EFF7EE;
+  --color-text: #0A5737;
+  --color-text-muted: #5E7464;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-primary) !important;
+  color: var(--color-text);
+}
+
+
+
+.theme-page-bg {
+  background: linear-gradient(180deg, rgba(10, 87, 55, 0.06), rgba(217, 231, 217, 0.22));
+}
+
+.theme-bg-secondary {
+  background-color: var(--color-secondary) !important;
+  color: #ffffff !important;
+}
+
+.theme-bg-primary {
+  background-color: transparent !important;
+  color: var(--color-secondary) !important;
+}
+
+.theme-bg-secondary-soft {
+  background-color: var(--color-secondary-soft) !important;
+}
+
+.theme-bg-gradient-secondary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%) !important;
+}
+
+.theme-text-secondary {
+  color: var(--color-secondary) !important;
+}
+
+.theme-text-primary {
+  color: var(--color-primary) !important;
+}
+
+.theme-text-muted {
+  color: var(--color-text-muted) !important;
+}
+
+.theme-border-secondary {
+  border-color: var(--color-secondary) !important;
+}
+
+.theme-border-hover-secondary:hover {
+  border-color: var(--color-secondary) !important;
+}
+
+.theme-hover-text-secondary:hover {
+  color: var(--color-secondary) !important;
+}
+
+.theme-shadow-secondary {
+  box-shadow: 0 20px 40px rgba(10, 87, 55, 0.22) !important;
+}
+
+.theme-blob {
+  background-color: rgba(10, 87, 55, 0.18) !important;
+}
+
+.theme-line-secondary {
+  background: linear-gradient(180deg, var(--color-secondary), rgba(10, 87, 55, 0.75)) !important;
+}
+
+.theme-focus-secondary:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(10, 87, 55, 0.18) !important;
+}
+
+.theme-input {
+  background-color: rgba(10, 87, 55, 0.08) !important;
+  border: 1.5px solid rgba(10, 87, 55, 0.25) !important;
+  color: var(--color-secondary) !important;
+}
+
+.theme-input::placeholder {
+  color: rgba(10, 87, 55, 0.55);
+}
+
+.theme-input option {
+  background-color: #F4F8F4;
+  color: var(--color-secondary);
+}
+
+.theme-dropdown-option {
+  color: #374151;
+}
+
+.theme-dropdown-option:hover,
+.theme-dropdown-option-active {
+  background-color: var(--color-secondary) !important;
+  color: #ffffff !important;
+}
+
+.theme-input::-webkit-calendar-picker-indicator {
+  background-color: var(--color-secondary);
+  cursor: pointer;
+}
+
+.theme-input[type="date"],
+.theme-input[type="time"],
+.theme-input select {
+  color-scheme: light;
+}
+
+.appointment-native-date {
+  accent-color: var(--color-secondary);
+}
+
+.appointment-native-date:focus {
+  accent-color: var(--color-secondary);
+}
+
+.appointment-native-date::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: auto;
+}
+
+.theme-pill {
+  background-color: rgba(10, 87, 55, 0.08);
+  color: var(--color-secondary);
+}
+
+.theme-icon-bg {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.theme-button-secondary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.theme-button-secondary:hover,
+.theme-hover-secondary:hover {
+  background-color: rgba(10, 87, 55, 0.9) !important;
+  color: #ffffff !important;
+}
+
+.theme-button-secondary-soft {
+  background-color: rgba(10, 87, 55, 0.12);
+  color: var(--color-secondary);
+}
+
+.theme-card {
+  background-color: transparent !important;
+  border: 1px solid rgba(10, 87, 55, 0.16);
+  box-shadow: 0 15px 30px rgba(10, 87, 55, 0.08);
+}
+
+.theme-input-focus:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(9, 39, 10, 0.16);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(10, 87, 55, 0.8);
+}
+
+/* Firefox Scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) var(--color-primary);
+}
