@@ -22,7 +22,7 @@ export const adminApiFetch = async (path: string, options: RequestInit = {}) => 
     headers.set('Authorization', `Bearer ${token}`);
   }
 
-  const response = await fetch(`${import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'}${path}`, {
+  const response = await fetch(path, {
     ...options,
     headers,
   });

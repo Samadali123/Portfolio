@@ -1,6 +1,8 @@
-﻿
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 import { Mail, Phone, MapPin, Globe, Cpu, Zap, Layout } from 'lucide-react';
+import footerLogo from '../assets/images/footer_logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -40,9 +42,9 @@ const Footer = () => {
 
           {/* Company Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center space-x-2 group">
+            <Link href="/" className="flex items-center space-x-2 group">
               <div className="flex items-center  space-x-2">
-                <img src={new URL('../assets/images/footer_logo.png', import.meta.url).href} alt="Nexora" className="w-20 h-20" />
+                <img src={footerLogo.src} alt="ASG Solutions" className="w-20 h-20" />
               </div>
             </Link>
             <p className="text-sm leading-relaxed text-gray-400 max-w-xs">
@@ -69,7 +71,7 @@ const Footer = () => {
               {footerLinks.quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.path}
+                    href={link.path}
                     className="text-sm hover:text-white transition-colors cursor-pointer relative group inline-block"
                   >
                     <span>{link.name}</span>
@@ -87,7 +89,7 @@ const Footer = () => {
               {footerLinks.services.map((service) => (
                 <li key={service.name}>
                   <Link
-                    to={service.path}
+                    href={service.path}
                     className="text-sm hover:text-white transition-colors cursor-pointer relative group inline-block"
                   >
                     <span>{service.name}</span>
@@ -104,12 +106,12 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:nexora.solutions@outlook.com"
+                  href="mailto:asg.solutions@outlook.com"
                   className="flex items-start space-x-3 group cursor-pointer"
                 >
                   <Mail className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
                   <span className="text-sm group-hover:text-white transition-colors">
-                    nexora.solution@outlook.com
+                    asg.solutions@outlook.com
                   </span>
                 </a>
               </li>
@@ -136,13 +138,13 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-16 pt-8 w-full flex flex-col">
           <p className="text-gray-500 text-center">
-            © {currentYear} <span className="text-emerald-500 font-semibold">Nexora Solution</span>. All rights reserved.
+            � {currentYear} <span className="text-emerald-500 font-semibold">ASG Solutions</span>. All rights reserved.
           </p>
           <div className="flex justify-center items-center w-full">
 
             <div className="flex gap-6">
               <Link
-                to="/privacy-policy"
+                href="/privacy-policy"
                 className="relative z-10 cursor-pointer text-gray-400 hover:text-white group"
               >
                 Privacy Policy
@@ -150,7 +152,7 @@ const Footer = () => {
               </Link>
 
               <Link
-                to="/terms-of-service"
+                href="/terms-of-service"
                 className="relative z-10 cursor-pointer text-gray-400 hover:text-white group"
               >
                 Terms of Service

@@ -1,0 +1,64 @@
+Services Offered by ASG Solutions
+
+1. Web Development
+
+We build modern, responsive, and scalable web applications for startups, businesses, and agencies.
+
+Our web development services include Business Websites, Portfolio Websites, Landing Pages, Admin Panels & Dashboards, Custom Web Applications, Full-Stack SaaS Platforms, E-commerce Solutions
+
+
+2. Mobile App Development
+
+We develop high-performance mobile applications for Android and iOS with modern UI/UX and secure backend integration.
+
+Our mobile app services include Cross-Platform Mobile Apps, Business Applications, AI-Powered Mobile Apps, Real-Time Applications, API Integration, Authentication Systems
+
+
+
+3. AI Chatbot Development
+
+We build intelligent AI chatbots powered by Generative AI and RAG (Retrieval-Augmented Generation).
+
+Our chatbot solutions can Answer from company documents and PDFs, Respond using FAQs and knowledge bases, Handle customer support queries, Automate business workflows, Integrate with websites and applications, Support multi-user conversations
+
+
+
+4. Machine Learning & AI Solutions
+
+We create AI and machine learning solutions that help businesses automate processes and gain insights from data.
+
+Our AI/ML services include Prediction Systems, Recommendation Engines, Data Analysis Tools, AI Automation Systems, Custom ML Models, Intelligent Search Systems
+
+
+5. SaaS Development
+
+We build scalable SaaS platforms with secure architecture and modern user experience.
+
+Our SaaS solutions include:, Authentication & Authorization, Role-Based Access Control (RBAC), Subscription & Billing Systems, Analytics Dashboards, Multi-Tenant Architecture, Admin & User Panels, API Integrations
+
+
+
+6. Backend API Development
+
+We develop secure, fast, and scalable backend systems and APIs for modern applications.
+
+Technologies we use Node.js, Express.js, FastAPI, Django
+
+Our backend services include REST API Development, Authentication Systems, Database Integration, Real-Time Features, Third-Party API Integration, Microservices Architecture
+
+
+7. Database Design & Management
+
+We design optimized and scalable database architectures based on project requirements.
+
+Databases we work with PostgreSQL, MongoDB, MySQL, SQLite, Redis, Vector Databases
+
+Our database services include Database Schema Design, Query Optimization, Data Modeling, Scalability Planning, Backup & Security Setup
+
+
+
+8. Maintenance & Support
+
+We provide continuous technical support and long-term maintenance for applications and platforms.
+
+Our support services include Bug Fixing, Performance Optimization, Feature Enhancements, Deployment Support, Server Monitoring, Security Updates, Long-Term Maintenance & Scaling Support

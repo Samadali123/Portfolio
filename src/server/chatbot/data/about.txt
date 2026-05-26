@@ -1,0 +1,74 @@
+
+ASG Solutions – Company Information
+
+1.About ASG Solutions
+
+ASG Solutions is a modern IT services and software development company based in India.
+
+We specialize in building Websites, Mobile Applications ,AI Chatbots ,AI-Powered Applications ,SaaS Platforms, Automation Solutions
+
+We help startups, agencies, and small-to-medium businesses create scalable, modern, and high-performance digital products.
+
+
+2.Mission
+
+Our mission is to provide reliable, modern, and affordable technology solutions that help businesses grow digitally.
+
+
+3.Vision
+
+Our vision is to become a trusted long-term technology partner for businesses worldwide.
+
+4.Services We Provide
+
+Web Development
+Business Websites, SaaS Platforms, Admin Dashboards, Custom Web Applications, Landing Pages
+
+Mobile App Development
+Android Applications, Cross-Platform Apps, Business Apps, AI Mobile Apps
+
+
+AI & Automation
+AI Chatbots, AI Automation Systems, AI Agents, RAG-Based AI Systems, AI Customer Support Solutions, Workflow Automation
+
+
+Backend & Cloud Solutions
+API Development, Scalable Backend Systems, Cloud Deployment, CI/CD Pipelines, Database Architecture
+
+
+
+5.Technologies We Use
+
+
+Frontend
+React.js, Next.js, JavaScript, TypeScript
+
+
+Backend
+Node.js, Express.js, Python, FastAPI, Django
+
+
+Databases
+MongoDB, PostgreSQL, MySQL, SQL, Redis, ChromaDB
+
+
+AI Technologies
+Generative AI (GenAI), RAG (Retrieval-Augmented Generation), LangChain, Vector Databases, AI Automation Systems
+
+
+DevOps & Cloud
+Docker, GitHub Actions, CI/CD Pipelines, AWS
+
+
+
+6.Working Hours
+
+Monday to Saturday
+10:00 AM to 7:00 PM (IST)
+
+
+7.Contact Information
+
+Email: contact@asgsolutions.com
+Phone: +91-8878858338
+Location: India

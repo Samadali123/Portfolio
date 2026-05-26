@@ -1,11 +1,15 @@
-﻿import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import logoPath from '../assets/images/nav_logo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
 
   // Add scroll listener to change navbar style on scroll
@@ -30,8 +34,6 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
-  const logoPath = new URL('../assets/images/nav_logo.png', import.meta.url).href;
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
@@ -42,9 +44,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <img src={logoPath} alt="Nexora Solution" className="w-18 h-18" />
-            <span className="text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-gray-900 leading-4.5">Nexora <br /> Solution</span>
+          <Link href="/" className="flex items-center space-x-2 group">
+            <img src={logoPath.src} alt="ASG Solutions" className="w-18 h-18" />
+            <span className="text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-gray-900 leading-4.5">ASG <br /> Solutions</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -52,8 +54,8 @@ const Navbar = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
-                className={`px-4 py-2 text-sm font-medium transition-all duration-200 border-b-2 ${location.pathname === link.path
+                href={link.path}
+                className={`px-4 py-2 text-sm font-medium transition-all duration-200 border-b-2 ${pathname === link.path
                   ? 'theme-text-secondary border-b-theme-secondary'
                   : 'text-gray-700 border-b-transparent hover:theme-text-secondary'
                   }`}
@@ -66,7 +68,7 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              to="/contact#appointment"
+              href="/contact#appointment"
               className="px-6 py-2.5 theme-bg-secondary text-white rounded-3xl font-medium shadow-lg theme-shadow-secondary hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
             >
               Book a Demo
@@ -97,11 +99,11 @@ const Navbar = () => {
       >
         <div className="px-6 py-6 space-y-3">
           {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
+            const isActive = pathname === link.path;
             return (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block px-4 py-3 rounded-r-xl text-base transition-all duration-300 border-l-4 ${isActive
                   ? 'bg-white/10 text-white border-emerald-400 font-semibold translate-x-2'
@@ -116,7 +118,7 @@ const Navbar = () => {
           {/* Action Button */}
           <div className="pt-4">
             <Link
-              to="/contact#appointment"
+              href="/contact#appointment"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block px-4 py-4 text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold text-center transition-colors shadow-lg active:scale-95"
             >
@@ -130,4 +132,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

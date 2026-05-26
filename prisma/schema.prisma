@@ -84,3 +84,25 @@ model Admin {
 
   @@map("admins")
 }
+
+model ChatHistory {
+  id          BigInt   @id @default(autoincrement())
+  sessionId   String   @map("session_id")
+  userMessage String   @map("user_message")
+  botResponse String   @map("bot_response")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@index([sessionId])
+  @@index([createdAt])
+  @@map("chat_history")
+}
+
+model Vector {
+  id        BigInt  @id @default(autoincrement())
+  docId     String? @map("doc_id")
+  content   String
+  embedding Float[]
+  metadata  Json?
+
+  @@map("vectors")
+}
