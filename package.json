@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+    "postinstall": "prisma generate",
     "chatbot:ingest": "node src/server/chatbot/ingest.js",
     "test": "node --test src/server/chatbot.test.js",
     "build": "next build",
