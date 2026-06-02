@@ -12,18 +12,17 @@ import {
   MessageSquare
 } from 'lucide-react';
 
-// IMPORT VIDEOS
-// import video1 from '../assets/videos/video1.mp4';
-// import video2 from '../assets/videos/video2.mp4';
-// import video3 from '../assets/videos/video3.mp4';
-
-// Unified thumbnail for all projects
-const THUMBNAIL_URL = 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1200';
+const FALAH_TRIPS_VIDEO_PATH = '/videos/tripAi.mp4';
+const ERP_AI_VIDEO_PATH = '/videos/erpAi.mp4';
+const LEAD_AI_VIDEO_PATH = '/videos/leadAi.mp4';
+const GATHERLY_VIDEO_PATH = '/videos/gatherly.mp4';
 
 type PortfolioItem = {
   id: number;
   title: string;
   description: string;
+  imageUrl: string;
+  imageAlt: string;
   videoPath?: string;
   liveUrl: string;
   industry: string;
@@ -35,28 +34,45 @@ const portfolioItems: PortfolioItem[] = [
     id: 1,
     title: 'FallahTrips: AI Trip Planner',
     description: 'A fully AI-powered travel planning engine tailored for the UAE. Generates personalized itineraries using a multi-step LangChain pipeline backed by Google Gemini 1.5 Flash.',
-    // videoPath: video1,
+    imageUrl: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1200',
+    imageAlt: 'Modern city skyline representing AI-powered travel planning',
+    videoPath: FALAH_TRIPS_VIDEO_PATH,
     liveUrl: 'https://fallah-trips.vercel.app',
     industry: 'TRAVEL AI',
-    technologies: ['React', 'LangChain', 'Gemini AI', 'Tailwind'],
+    technologies: ['React', 'Supabase', 'LangChain', 'FastAPI', 'Gemini AI', 'Tailwind'],
   },
   {
     id: 2,
-    title: 'Gatherly: Real Time Anonymous Platform',
-    description: 'An inspiration platform for designers built using Node.js, Express, MongoDB, and React, featuring AI-powered search and curation.',
-    // videoPath: video2,
-    liveUrl: 'https://gatherly-mu.vercel.app',
-    industry: 'Social Media',
-    technologies: ['Node.js', 'MongoDB', 'React', 'Express'], 
+    title: 'Aetheris ERP AI',
+    description: 'An enterprise-grade AI ERP automation platform with HRMS, CRM, finance, inventory, workflow automation, document OCR, RAG chat, SQL insights, and a multi-agent orchestrator for business operations.',
+    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200',
+    imageAlt: 'Enterprise analytics dashboard with charts and operational data',
+    videoPath: ERP_AI_VIDEO_PATH,
+    liveUrl: 'https://erp-ai-eta.vercel.app/dashboard',
+    industry: 'ENTERPRISE ERP AI',
+    technologies: ['Next.js 15', 'FastAPI', 'Aiven', 'LangChain', 'Groq', 'Celery', 'Redis'],
   },
   {
     id: 3,
-    title: 'Lead Ai',
-    description: 'A sophisticated CRM application leveraging AI to automate customer relationship workflows and provide predictive insights.',
-    // videoPath: video3,
-    liveUrl: 'https://lead-ai-smoky.vercel.app',
-    industry: 'ENTERPRISE SAAS',
-    technologies: ['React', 'Firebase', 'OpenAI', 'Framer Motion'], 
+    title: 'Lead Magnet AI',
+    description: 'An AI-powered technical lead generation platform that runs deep company audits, researches competitors and LinkedIn signals, generates PDF reports, supports CSV bulk analysis, and manages subscriptions with Razorpay token limits.',
+    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200',
+    imageAlt: 'Team reviewing lead generation strategy and technical audit insights',
+    videoPath: LEAD_AI_VIDEO_PATH,
+    liveUrl: 'https://lead-ai-smoky.vercel.app/#/',
+    industry: 'LEAD GENERATION AI',
+    technologies: ['React', 'Vite', 'Render', 'FastAPI', 'LangChain', 'Groq', 'Razorpay'],
+  },
+  {
+    id: 4,
+    title: 'Gatherly',
+    description: 'A professional social networking app where users can connect, chat anonymously in private rooms, and run end-to-end meetings with realtime collaboration support.',
+    imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200',
+    imageAlt: 'Professional networking meetup and collaborative social session',
+    videoPath: GATHERLY_VIDEO_PATH,
+    liveUrl: 'https://gatherly-phi-six.vercel.app/login',
+    industry: 'SOCIAL COLLABORATION',
+    technologies: ['React', 'Node.js', 'Socket.IO', 'LiveKit', 'Supabase', 'Redis'],
   },
 ];
 
@@ -120,9 +136,9 @@ const Portfolio = () => {
                   onClick={() => hasVideo && setIsModalOpen(true)}
                 >
                   <img
-                    src={THUMBNAIL_URL}
+                    src={currentProject.imageUrl}
                     className={`w-full h-full object-cover transition-opacity duration-700 ${isHoveringVideo && hasVideo ? 'opacity-0' : 'opacity-100'}`}
-                    alt="Project Thumbnail"
+                    alt={currentProject.imageAlt}
                   />
                   {hasVideo && <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${isHoveringVideo ? 'opacity-0' : 'opacity-100'}`}>
                     <div className="w-20 h-20 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center border border-white/40 shadow-xl">

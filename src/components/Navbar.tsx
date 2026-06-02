@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
-import logoPath from '../assets/images/nav_logo.png';
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -45,7 +45,6 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <img src={logoPath.src} alt="ASG Solutions" className="w-18 h-18" />
             <span className="text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-gray-900 leading-4.5">ASG <br /> Solutions</span>
           </Link>
 

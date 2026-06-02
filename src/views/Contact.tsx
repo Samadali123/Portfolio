@@ -391,8 +391,6 @@ const AppointmentForm = () => {
             name="date"
             required
             min={new Date().toISOString().split('T')[0]}
-            onClick={(event) => event.currentTarget.showPicker?.()}
-            onFocus={(event) => event.currentTarget.showPicker?.()}
             className="w-full px-4 py-3 theme-input appointment-native-date rounded-xl focus:outline-none theme-focus-secondary transition-all cursor-pointer"
           />
           {/* <ValidationError prefix="Date" field="date" errors={state.errors} className="text-red-500 text-sm mt-1" /> */}
