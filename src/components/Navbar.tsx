@@ -21,6 +21,21 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isMobileMenuOpen]);
+
 
 
 
@@ -36,8 +51,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-primary/60 backdrop-blur-lg shadow-lg shadow-gray-900/20'
+      className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-300 ${isScrolled || isMobileMenuOpen
+        ? 'bg-[#d3d3d3]/95 backdrop-blur-lg shadow-lg shadow-gray-900/20'
         : 'bg-transparent'
         }`}
     >
@@ -76,8 +91,12 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -93,10 +112,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden transition-all duration-500 ease-in-out overflow-hidden ${isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-          } bg-[#0b251a]`}
+        id="mobile-navigation"
+        className={`md:hidden fixed left-0 right-0 top-20 z-[65] h-[calc(100dvh-5rem)] bg-[#0b251a] transition-all duration-300 ease-out ${
+          isMobileMenuOpen
+            ? 'translate-y-0 opacity-100 pointer-events-auto'
+            : '-translate-y-3 opacity-0 pointer-events-none'
+        }`}
       >
-        <div className="px-6 py-6 space-y-3">
+        <div className="h-full overflow-y-auto px-6 py-6 space-y-3">
           {navLinks.map((link) => {
             const isActive = pathname === link.path;
             return (
@@ -104,7 +127,7 @@ const Navbar = () => {
                 key={link.path}
                 href={link.path}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-4 py-3 rounded-r-xl text-base transition-all duration-300 border-l-4 ${isActive
+                className={`block px-4 py-4 rounded-r-xl text-base transition-all duration-300 border-l-4 ${isActive
                   ? 'bg-white/10 text-white border-emerald-400 font-semibold translate-x-2'
                   : 'text-gray-400 border-transparent hover:text-gray-200 hover:bg-white/5'
                   }`}

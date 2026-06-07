@@ -251,12 +251,7 @@ const OpenPositions = () => {
             fd.set('github', normalizeUrl(github));
             fd.set('role', role);
 
-            // Old Formspree API code:
-            // const res = await fetch('https://formspree.io/f/mlgazkeb', {
-            //     method: 'POST',
-            //     headers: { Accept: 'application/json' },
-            //     body: fd,
-            // });
+           
             const res = await fetch('/api/v1/applications', {
                 method: 'POST',
                 headers: {

@@ -3,9 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Briefcase,
-  MapPin,
-  DollarSign,
   Users,
   Heart,
   Target,

@@ -3,8 +3,7 @@
 import { FormEvent, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CalendarCheck, CheckCircle, X } from 'lucide-react';
-// Old Formspree integration kept for reference during backend migration.
-// import { useForm, ValidationError } from '@formspree/react';
+
 
 type SubmitState = {
   submitting: boolean;
@@ -139,20 +138,11 @@ const SuccessPopup = ({ message, onClose }: { message: string; onClose: () => vo
 
 // Contact Form Component
 const ContactForm = () => {
-  // Old Formspree API code:
-  // const [state, handleSubmit, reset] = useForm('xlgalrdq');
   const [state, setState] = useState<SubmitState>({ submitting: false, error: '' });
   const [showPopup, setShowPopup] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
-  // Old Formspree success handling:
-  // useEffect(() => {
-  //   if (state.succeeded) {
-  //     formRef.current?.reset();
-  //     reset();
-  //     setShowPopup(true);
-  //   }
-  // }, [state.succeeded]);
+
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -215,7 +205,7 @@ const ContactForm = () => {
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
             placeholder="John Doe"
           />
-          {/* <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-sm mt-1" /> */}
+          
         </div>
 
         <div>
@@ -230,7 +220,7 @@ const ContactForm = () => {
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
             placeholder="john@example.com"
           />
-          {/* <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-1" /> */}
+          
         </div>
 
         <div>
@@ -245,7 +235,7 @@ const ContactForm = () => {
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all resize-none"
             placeholder="Tell us about your project..."
           />
-          {/* <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-sm mt-1" /> */}
+          
         </div>
 
         {state.error && <p className="text-red-500 text-sm">{state.error}</p>}
@@ -278,22 +268,13 @@ const ContactForm = () => {
 
 // Appointment Form Component
 const AppointmentForm = () => {
-  // Old Formspree API code:
-  // const [state, handleSubmit, reset] = useForm('xnjlzajl');
   const [state, setState] = useState<SubmitState>({ submitting: false, error: '' });
   const [showPopup, setShowPopup] = useState(false);
   const [selectedService, setSelectedService] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
 
-  // Old Formspree success handling:
-  // useEffect(() => {
-  //   if (state.succeeded) {
-  //     formRef.current?.reset();
-  //     reset();
-  //     setShowPopup(true);
-  //   }
-  // }, [state.succeeded]);
+
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -378,7 +359,7 @@ const AppointmentForm = () => {
             placeholder="Choose a service"
             onChange={setSelectedService}
           />
-          {/* <ValidationError prefix="Service" field="service" errors={state.errors} className="text-red-500 text-sm mt-1" /> */}
+         
         </div>
 
         <div>
@@ -393,7 +374,7 @@ const AppointmentForm = () => {
             min={new Date().toISOString().split('T')[0]}
             className="w-full px-4 py-3 theme-input appointment-native-date rounded-xl focus:outline-none theme-focus-secondary transition-all cursor-pointer"
           />
-          {/* <ValidationError prefix="Date" field="date" errors={state.errors} className="text-red-500 text-sm mt-1" /> */}
+          
         </div>
 
         <div>
@@ -407,7 +388,7 @@ const AppointmentForm = () => {
             placeholder="Select time"
             onChange={setSelectedTime}
           />
-          {/* <ValidationError prefix="Time" field="time" errors={state.errors} className="text-red-500 text-sm mt-1" /> */}
+          
         </div>
 
         <div>
@@ -422,7 +403,7 @@ const AppointmentForm = () => {
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
             placeholder="john@example.com"
           />
-          {/* <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-sm mt-1" /> */}
+          
         </div>
 
         {state.error && <p className="text-red-500 text-sm">{state.error}</p>}
