@@ -96,12 +96,12 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:asg.solutions@outlook.com"
+                  href="mailto:contact@asgsolutions.dev"
                   className="flex items-start justify-center sm:justify-start space-x-3 group cursor-pointer break-all"
                 >
                   <Mail className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
                   <span className="text-sm group-hover:text-white transition-colors">
-                    asg.solutions@outlook.com
+                    contact@asgsolutions.dev
                   </span>
                 </a>
               </li>

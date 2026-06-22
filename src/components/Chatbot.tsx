@@ -131,7 +131,7 @@ const Chatbot = () => {
       throw new Error(payload?.message || 'Chatbot backend request failed');
     }
 
-    return payload?.data?.answer || "I'm having trouble answering right now. Please contact us at ASG.solutions@outlook.com or +91 8878858338.";
+    return payload?.data?.answer || "I'm having trouble answering right now. Please contact us at contact@asgsolutions.dev or +91 8878858338.";
   };
 
   const handleSend = async () => {
@@ -163,7 +163,7 @@ const Chatbot = () => {
     } catch {
       setMessages(prev => [...prev, {
         id: prev.length + 1,
-        text: "Sorry, something went wrong! Please reach us at ASG.solutions@outlook.com or +91 8878858338.",
+        text: "Sorry, something went wrong! Please reach us at contact@asgsolutions.dev or +91 8878858338.",
         sender: 'bot',
         timestamp: Date.now(),
         showContactCta: shouldShowContactCta(userText),

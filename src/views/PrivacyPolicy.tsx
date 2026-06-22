@@ -31,7 +31,7 @@ const PrivacyPolicy = () => {
         {
             icon: Bell,
             title: "5. Your Rights",
-            content: "Depending on your location, you may have the right to access, correct, or delete your personal data. You can opt-out of marketing communications at any time. To exercise these rights, please contact our data protection team at asg.solutions@outlook.com"
+            content: "Depending on your location, you may have the right to access, correct, or delete your personal data. You can opt-out of marketing communications at any time. To exercise these rights, please contact our data protection team at contact@asgsolutions.dev"
         }
     ];
 
@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
                         If you have any questions regarding our privacy practices or data handling, please don't hesitate to reach out.
                     </p>
                     <a
-                        href="mailto:contact@asgsolutions.com"
+                        href="mailto:contact@asgsolutions.dev"
                         className="inline-flex items-center gap-2 px-8 py-3.5 bg-white theme-text-secondary rounded-full font-bold hover:bg-emerald-50 transition-colors shadow-lg"
                     >
                         Contact Privacy Officer

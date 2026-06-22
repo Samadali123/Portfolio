@@ -470,7 +470,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: Mail, title: 'Email Us', content: 'asg.solutions@outlook.com', link: 'mailto:asg.solutions@outlook.com' },
+              { icon: Mail, title: 'Email Us', content: 'contact@asgsolutions.dev', link: 'mailto:contact@asgsolutions.dev' },
               { icon: Phone, title: 'Call Us', content: '+91 8878858338', link: 'tel:+918878858338' },
               { icon: MapPin, title: 'Visit Us', content: 'Bhopal, Madhya Pradesh', link: '#map' },
             ].map((item, index) => (
