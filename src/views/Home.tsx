@@ -42,25 +42,29 @@ const Home = () => {
     {
       icon: Code,
       title: 'Software Development',
-      description: 'Custom web applications built with modern technologies and best practices.',
+      description: 'SaaS platforms, internal tools, and client portals that scale delivered in weeks, not months.',
+      path: '/services/software-development',
       gradient: 'from-green-500 to-emerald-400',
     },
     {
       icon: Brain,
-      title: 'AI & Automation',
-      description: 'Intelligent automation solutions powered by cutting-edge AI technology.',
+      title: 'AI Solutions',
+      description: 'Automate workflows that slow your team down. We build AI systems that integrate with your existing tools — no infrastructure overhaul needed.',
+      path: '/services/ai-solutions',
       gradient: 'from-purple-500 to-pink-400',
     },
     {
       icon: BarChart3,
-      title: 'Data Solutions',
-      description: 'Transform your data into actionable insights with advanced analytics and Engineering.',
+      title: 'Data Driven Solutions',
+      description: 'Turn raw data into decisions. Real-time dashboards, automated pipelines, and predictive analytics that drive revenue.',
+      path: '/services/data-driven-solutions',
       gradient: 'from-orange-500 to-yellow-400',
     },
     {
       icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable and secure cloud infrastructure tailored to your business needs.',
+      title: 'Business Consultation',
+      description: 'Scale without the headaches. AWS/Azure/GCP expertise. Migrations, cost optimization, 99.9% uptime SLA.',
+      path: '/services/business-consultation',
       gradient: 'from-blue-500 to-cyan-400',
     },
   ];
@@ -71,28 +75,29 @@ const Home = () => {
   // For Careers Page
   const testimonials = [
     {
-      name: 'Dalima Gupta',
-      // role: 'CEO at TechCorp',
-      role: 'CEO',
-      image: DefaultClients,
-      content: 'ASG Solutions transformed our cloud infrastructure. Their expertise and professionalism are unmatched.',
-      rating: 4,
+      name: 'Raj Kumar',
+      role: 'Logistics AI Lead, Leading Logistics Company, UAE',
+      image: 'https://ui-avatars.com/api/?name=Raj+Kumar&background=0D8ABC&color=fff',
+      content: "ASG Solutions built our RAG system in 6 weeks. Quality exceeded our expectations.",
+      rating: 5,
     },
     {
-      name: 'Jyoti Mehta',
-      // role: 'CTO at DataFlow',
-      role: 'CTO',
-      image: DefaultClients,
-      content: 'The AI solutions provided by ASG Solutions increased our efficiency by 300%. Highly recommended!',
-      rating: 3,
+      name: 'Priya Sharma',
+      role: 'Support Director, Logistics AI Co.',
+      image: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=FF8A65&color=fff',
+      content: (
+        <>
+          ASG Solutions built an RAG chatbot that reduced our support response time by <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline">60%</Link>. Implementation was seamless and the team provided excellent training.
+        </>
+      ),
+      rating: 5,
     },
     {
-      name: 'Jaydeep Parmar',
-      // role: 'Director at InnovateLabs',
-      role: 'Director',
-      image: DefaultClients,
-      content: 'Outstanding service and support. They truly understand business needs and deliver results.',
-      rating: 4,
+      name: 'Vikram Singh',
+      role: 'VP of Operations, Top E-Commerce Platform, India',
+      image: 'https://ui-avatars.com/api/?name=Vikram+Singh&background=4CAF50&color=fff',
+      content: "Our data pipelines are now 3x faster, providing real-time visibility into inventory. The migration was flawless with zero downtime.",
+      rating: 5,
     },
   ];
 
@@ -102,23 +107,23 @@ const Home = () => {
   const whyChooseUs = [
     {
       icon: Zap,
-      title: 'Fast Delivery',
-      description: 'Quick turnaround times without compromising quality',
+      title: 'MVP in 4 Weeks',
+      description: 'Prove your concept before full build. Our agile process removes months of waterfall planning.',
     },
     {
       icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime guarantee',
+      title: '99.9% Uptime SLA',
+      description: 'Enterprise-grade infrastructure. Every deployment monitored. Guaranteed response within 24 hours.',
     },
     {
       icon: Users,
-      title: 'Expert Team',
-      description: 'Seasoned professionals with years of industry experience',
+      title: 'Dedicated PM on Every Project',
+      description: 'Not a shared resource. Your dedicated project manager owns timeline, quality, and communication.',
     },
     {
       icon: CheckCircle,
-      title: '24/7 Support',
-      description: 'Round-the-clock support for your peace of mind',
+      title: '24hr Response Guarantee',
+      description: 'During business hours and weekends. Questions answered fast. Blockers removed same-day.',
     },
   ];
 
@@ -209,22 +214,24 @@ const Home = () => {
           >
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold theme-text-secondary leading-tight">
-              Empowering Businesses with
-              <span className="block bg-clip-text">
-                Smart Cloud & AI Solutions
+              We deliver intelligent solutions and end-to-end software development for Modern Businesses. 
+              <span className="block bg-clip-text text-2xl sm:text-3xl lg:text-3xl mt-4 font-normal text-gray-700">
+                faster than an in-house team, at a fraction of the cost.
               </span>
             </h1>
-            <p className="max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
-              Transform your business with cutting-edge technology. We deliver scalable cloud infrastructure,
-              intelligent automation, and data-driven insights.
-            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
-                href="/contact#appointment"
+                href="/contact"
                 className="px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl theme-shadow-secondary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-2"
               >
-                <span>Book a Demo</span>
+                <span>Get a Free Consultation</span>
                 <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/portfolio"
+                className="px-8 py-4 bg-transparent border-2 border text-theme-secondary rounded-3xl font-semibold hover:bg-theme-secondary hover:theme-text-secondary transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-2"
+              >
+                <span>See Our Work</span>
               </Link>
             </div>
           </motion.div>
@@ -254,7 +261,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link href="/services">
+                <Link href={service.path}>
                   <div className="group theme-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border theme-border-secondary">
                     <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <service.icon className="w-7 h-7 text-secondary" />
@@ -359,54 +366,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Portfolio Spotlight Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="theme-card rounded-3xl p-12 shadow-2xl border border-theme-secondary"
-          >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              <div>
-                <p className="uppercase tracking-[0.3em] text-sm font-semibold text-theme-secondary mb-4">
-                  Recent Work
-                </p>
-                <h2 className="text-4xl sm:text-5xl font-bold theme-text-secondary mb-6">
-                  Explore professional case studies built for enterprise-grade impact.
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                  Check our latest projects that showcase how strategic cloud, AI, and data solutions drive measurable results for modern businesses.
-                </p>
-                <Link
-                  href="/portfolio"
-                  className="inline-flex items-center px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-                >
-                  <span>View Portfolio</span>
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-              </div>
-              <div className="grid gap-4">
-                <div className="theme-card rounded-3xl p-6 border border-theme-secondary bg-white shadow-lg">
-                  <p className="font-semibold text-theme-secondary mb-2">Enterprise AI Automation</p>
-                  <p className="text-gray-600">A modern workflow platform that reduced manual operations by 65%.</p>
-                </div>
-                <div className="theme-card rounded-3xl p-6 border border-theme-secondary bg-white shadow-lg">
-                  <p className="font-semibold text-theme-secondary mb-2">Cloud Transformation</p>
-                  <p className="text-gray-600">A scalable cloud architecture with improved resilience and cost efficiency.</p>
-                </div>
-                <div className="theme-card rounded-3xl p-6 border border-theme-secondary bg-white shadow-lg">
-                  <p className="font-semibold text-theme-secondary mb-2">Data Intelligence</p>
-                  <p className="text-gray-600">Analytics dashboards that turned data into executive decision intelligence.</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-
+    
       {/*tech stack section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -418,7 +378,7 @@ const Home = () => {
           >
             <h2 className="text-4xl font-bold theme-text-secondary mb-4">Tech Stack We Used </h2>
             <p className="text-xl text-gray-600">
-              We use professional, enterprise-grade tooling across cloud, AI, data and web platforms.
+              We use professional, enterprise-grade tooling across Software, Cloud and AI platforms.
             </p>
           </motion.div>
 

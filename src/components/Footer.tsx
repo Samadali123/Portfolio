@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Globe, Cpu, Zap, Layout } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import footerLogo from '../assets/images/footer_logo.png';
 
 const Footer = () => {
@@ -16,18 +16,29 @@ const Footer = () => {
       { name: 'Contact', path: '/contact' },
     ],
     services: [
-      { name: 'Software Development', path: '/services' },
-      { name: 'AI & Automation', path: '/services' },
-      { name: 'Data Solutions', path: '/services' },
-      { name: 'Cloud & System Design', path: '/services' },
+      { name: 'Software Development', path: '/services/software-development' },
+      { name: 'AI Solutions', path: '/services/ai-solutions' },
+      { name: 'Data Driven Solutions', path: '/services/data-driven-solutions' },
+      { name: 'Business Consultation', path: '/services/business-consultation' },
     ],
   };
 
   const socialLinks = [
-    { icon: Globe, href: '#', label: 'Website' },
-    { icon: Cpu, href: '#', label: 'Tech' },
-    { icon: Zap, href: '#', label: 'Fast' },
-    { icon: Layout, href: '#', label: 'Design' },
+    { 
+      href: 'https://www.linkedin.com/company/asg-solutionsai/', 
+      label: 'LinkedIn',
+      icon: (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+    },
+    { 
+      href: 'https://x.com/ASG_Solutions_', 
+      label: 'Twitter',
+      icon: (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+    },
+    { 
+      href: 'https://www.instagram.com/asgsolutions.ai?igsh=dmdjaXBiZ25sbHJ6', 
+      label: 'Instagram',
+      icon: (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+    },
   ];
 
   return (
@@ -113,6 +124,19 @@ const Footer = () => {
                   <Phone className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
                   <span className="text-sm group-hover:text-white transition-colors">
                     +91 8878858338
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/918878858338"
+                  className="flex items-start justify-center sm:justify-start space-x-3 group cursor-pointer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <MessageCircle className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
+                  <span className="text-sm group-hover:text-white transition-colors">
+                    Contact us
                   </span>
                 </a>
               </li>

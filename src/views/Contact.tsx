@@ -2,7 +2,7 @@
 
 import { FormEvent, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CalendarCheck, CheckCircle, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CalendarCheck, CheckCircle, X, ChevronDown } from 'lucide-react';
 
 
 type SubmitState = {
@@ -49,6 +49,7 @@ const ThemedSelect = ({
         className="theme-input w-full rounded-xl px-4 py-3 focus:outline-none theme-focus-secondary transition-all flex items-center justify-between text-left cursor-pointer"
       >
         <span className={value ? 'theme-text-secondary' : 'text-gray-500'}>{value || placeholder}</span>
+        <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform duration-200 shrink-0 ${open ? 'rotate-180' : ''}`} />
       </button>
 
       <AnimatePresence>
@@ -205,7 +206,7 @@ const ContactForm = () => {
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
             placeholder="John Doe"
           />
-          
+
         </div>
 
         <div>
@@ -220,7 +221,57 @@ const ContactForm = () => {
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
             placeholder="john@example.com"
           />
-          
+
+        </div>
+
+        <div>
+          <label htmlFor="company" className="block text-sm font-medium theme-text-secondary mb-2">
+            Company Name
+          </label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
+            placeholder="Your Company Ltd"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="service" className="block text-sm font-medium theme-text-secondary mb-2">
+            Service Interest
+          </label>
+          <div className="relative">
+            <select
+              id="service"
+              name="service"
+              required
+              className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all text-gray-700 bg-white appearance-none pr-10 cursor-pointer"
+              defaultValue=""
+            >
+              <option value="" disabled>Select a service</option>
+              <option value="AI Solutions">AI Solutions</option>
+              <option value="Software Development">Software Development</option>
+              <option value="Data Solutions">Data Solutions</option>
+              <option value="Cloud">Cloud Infrastructure</option>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-4">
+              <ChevronDown className="w-4 h-4 text-gray-400" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+            Phone (optional)
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
+            placeholder="+1 234 567 8900"
+          />
         </div>
 
         <div>
@@ -235,7 +286,6 @@ const ContactForm = () => {
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all resize-none"
             placeholder="Tell us about your project..."
           />
-          
         </div>
 
         {state.error && <p className="text-red-500 text-sm">{state.error}</p>}
@@ -359,7 +409,7 @@ const AppointmentForm = () => {
             placeholder="Choose a service"
             onChange={setSelectedService}
           />
-         
+
         </div>
 
         <div>
@@ -374,7 +424,7 @@ const AppointmentForm = () => {
             min={new Date().toISOString().split('T')[0]}
             className="w-full px-4 py-3 theme-input appointment-native-date rounded-xl focus:outline-none theme-focus-secondary transition-all cursor-pointer"
           />
-          
+
         </div>
 
         <div>
@@ -388,7 +438,7 @@ const AppointmentForm = () => {
             placeholder="Select time"
             onChange={setSelectedTime}
           />
-          
+
         </div>
 
         <div>
@@ -403,7 +453,7 @@ const AppointmentForm = () => {
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
             placeholder="john@example.com"
           />
-          
+
         </div>
 
         {state.error && <p className="text-red-500 text-sm">{state.error}</p>}
@@ -453,14 +503,13 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6">
-              Let's Start a
+              Get in touch.
               <span className="block bg-clip-text">
-                Conversation
+                We'll respond within 24 hours.
               </span>
             </h1>
             <p className="max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
-              Have a question or ready to transform your business? We're here to help.
-              Reach out to us and let's create something amazing together.
+              Choose the best way to reach us below. We're ready to help you scale your business.
             </p>
           </motion.div>
         </div>
@@ -468,34 +517,44 @@ const Contact = () => {
 
       <section className="px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { icon: Mail, title: 'Email Us', content: 'contact@asgsolutions.dev', link: 'mailto:contact@asgsolutions.dev' },
-              { icon: Phone, title: 'Call Us', content: '+91 8878858338', link: 'tel:+918878858338' },
-              { icon: MapPin, title: 'Visit Us', content: 'Bhopal, Madhya Pradesh', link: '#map' },
-            ].map((item, index) => (
-              <motion.a
-                key={index}
-                href={item.link}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="theme-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border theme-border-secondary group"
-              >
-                <div className="w-14 h-14 theme-bg-secondary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.content}</p>
-              </motion.a>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <motion.a
+              href="#appointment"
+              className="theme-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border theme-border-secondary group text-center block"
+            >
+              <div className="w-14 h-14 theme-bg-secondary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <CalendarCheck className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Schedule a Call</h3>
+              <p className="text-gray-600">Book a 30-min free consultation directly in our calendar.</p>
+            </motion.a>
+            <motion.a
+              href="#message"
+              className="theme-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border theme-border-secondary group text-center block"
+            >
+              <div className="w-14 h-14 theme-bg-secondary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Mail className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Send a Message</h3>
+              <p className="text-gray-600">Fill out our form and we'll get back to you within 24 hours.</p>
+            </motion.a>
+            <motion.div
+              className="theme-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border theme-border-secondary group text-center block"
+            >
+              <div className="w-14 h-14 theme-bg-secondary rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Phone className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Quick Chat</h3>
+              <p className="text-gray-600 mb-4">Chat with us for quick questions.</p>
+              <a href="https://wa.me/918878858338" target="_blank" rel="noopener noreferrer" className="theme-text-secondary font-semibold hover:underline block mb-2">
+                Connect on WhatsApp
+              </a>
+              <a href="https://www.linkedin.com/company/asg-solutionsai/" target="_blank" rel="noopener noreferrer" className="text-text-secondary font-semibold hover:underline block">
+                Connect on LinkedIn
+              </a>
+            </motion.div>
           </div>
-        </div>
-      </section>
 
-      <section className="px-4 sm:px-6 lg:px-8 py-12">
-        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <motion.div
               id="message"

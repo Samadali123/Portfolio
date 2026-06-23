@@ -28,7 +28,7 @@ const Services = () => {
     },
     {
       icon: Brain,
-      title: 'AI Application Development',
+      title: 'AI Solutions',
       description: 'Intelligent solutions powered by cutting-edge artificial intelligence technology.',
       features: [
         'Machine Learning Models',

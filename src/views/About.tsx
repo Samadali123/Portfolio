@@ -44,13 +44,13 @@ const About = () => {
   const timeline = [
     {
       year: '2024',
-      title: 'Worked as a Freelancer',
+      title: 'Founded ASG Solutions',
       description: 'Started with a vision to transform businesses through technology',
     },
     {
       year: '2025',
-      title: 'First Major Client',
-      description: 'Successfully delivered a custom software solution for a local business, leading to 5x growth',
+      title: 'First Enterprise Client',
+      description: 'Delivered first enterprise solution, serving clients across India, UAE, and beyond.',
     },
     {
       year: '2026',
@@ -62,10 +62,10 @@ const About = () => {
 
   // Stats data
   const stats = [
-    { icon: Users, value: '25+', label: 'Happy Clients' },
-    { icon: Award, value: '50+', label: 'Projects Completed' },
-    { icon: Globe, value: '3+', label: 'Countries Served' },
-    { icon: TrendingUp, value: '95%', label: 'Client Satisfaction' },
+    { icon: Users, value: '10+', label: 'Enterprise Clients' },
+    { icon: Award, value: '4', label: 'Live Deployments' },
+    { icon: Globe, value: '3', label: 'Countries Served' },
+    { icon: TrendingUp, value: '99.9%', label: 'Uptime Track Record' },
   ];
 
   return (
@@ -119,6 +119,20 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Trusted By */}
+      <section className="px-4 sm:px-6 lg:px-8 py-12 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto text-center">
+          <p className="text-gray-500 font-medium uppercase tracking-wider mb-8">Trusted by 25+ clients across 3 countries</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+            <span className="text-xl font-bold text-gray-800">Leading Logistics Co, UAE</span>
+            <span className="text-xl font-bold text-gray-800">Top E-Commerce, India</span>
+            <span className="text-xl font-bold text-gray-800">Innovative Fintech</span>
+          </div>
+        </div>
+      </section>
+
+
 
       {/* Mission & Vision */}
       <section className="px-4 sm:px-6 lg:px-8 py-20">
