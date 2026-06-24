@@ -40,12 +40,6 @@ const SoftwareDevelopment = () => {
     { title: 'Launch & Support (Week 7+)', items: ['Deployment', 'Monitoring', '30-day optimization'] },
   ];
 
-  const techStack = {
-    FRONTEND: ['React', 'Next.js', 'Vue.js', 'Tailwind CSS', 'TypeScript'],
-    BACKEND: ['Node.js', 'Python', 'Go', 'PostgreSQL', 'MongoDB'],
-    CLOUD: ['AWS', 'Vercel', 'Railway', 'Azure'],
-    TOOLS: ['Git', 'Docker', 'CI/CD', 'GitHub Actions'],
-  };
 
   const faqs = [
     { q: 'How long does a typical project take?', a: 'MVPs in 4-8 weeks. Full-scale apps 8-16 weeks. Depends on complexity and your feedback speed.' },
@@ -96,7 +90,7 @@ const SoftwareDevelopment = () => {
       </section>
 
       {/* Our Process */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50/50">
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">Our Process</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -120,51 +114,32 @@ const SoftwareDevelopment = () => {
         </div>
       </section>
 
-      {/* Tech Stack */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-10">Tech Stack</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {Object.entries(techStack).map(([category, techs]) => (
-              <div key={category} className="text-left">
-                <h4 className="font-bold text-gray-900 mb-4">{category}</h4>
-                <div className="flex flex-wrap gap-2">
-                  {techs.map((t) => (
-                    <span key={t} className="px-3 py-1 bg-gray-100 rounded-lg text-sm text-gray-700 font-medium">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  
 
       {/* Case Studies */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 bg-theme-secondary/5">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">Case Studies</h2>
           <div className="grid sm:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">E-Commerce SaaS Platform - UAE</h3>
+            <div className="p-8 rounded-2xl border theme-border-secondary shadow-lg">
+              <h3 className="text-xl font-bold mb-4">Gatherly - Real-Time Collaboration Platform</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge:</strong> Client needed a marketplace for 500+ vendors.</p>
-                <p><strong className="text-gray-900">Solution:</strong> Node.js/React SaaS with payment processing and analytics.</p>
-                <p><strong className="text-gray-900">Result:</strong> 2,000 vendors onboarded, $5M processed, 99.9% uptime.</p>
-                <p><strong className="text-gray-900">Tech:</strong> React, Node.js, PostgreSQL, AWS.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Building a scalable platform for real-time communication, private rooms, and collaborative meetings.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Developed a full-stack social collaboration application with live messaging, room management, and video communication features.</p>
+                <p><strong className="text-gray-900">Result: </strong>Delivered a responsive platform capable of supporting real-time user interactions and collaborative workflows.</p>
+                <p><strong className="text-gray-900">Tech: </strong>React, Node.js, Socket.IO, LiveKit, Supabase.</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
-            <div className="bg-white p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Internal Workflow App - India</h3>
+            <div className="p-8 rounded-2xl border theme-border-secondary shadow-lg">
+              <h3 className="text-xl font-bold mb-4">FallahTrips - AI Travel Planning Platform</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge:</strong> Manual tracking of inventory across 15 warehouses.</p>
-                <p><strong className="text-gray-900">Solution:</strong> Custom internal dashboard with real-time sync.</p>
-                <p><strong className="text-gray-900">Result:</strong> 100% visibility achieved, saving 15 hours per week.</p>
-                <p><strong className="text-gray-900">Tech:</strong> Next.js, Firebase, Tailwind CSS.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Travelers needed a faster way to create personalized itineraries without manual research.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Built an intelligent travel planning application combining modern web technologies with AI-powered itinerary generation.</p>
+                <p><strong className="text-gray-900">Result: </strong>Reduced trip planning complexity by generating tailored travel recommendations within minutes.</p>
+                <p><strong className="text-gray-900">Tech: </strong>React, Supabase, FastAPI, LangChain, GenAI</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
@@ -181,12 +156,12 @@ const SoftwareDevelopment = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="theme-card p-6 rounded-2xl border theme-border-secondary">
               <h3 className="text-lg font-bold mb-2 text-gray-900">MVP</h3>
-              <p className="text-emerald-600 font-bold text-xl mb-2">$15K - $25K</p>
+              <p className="text-emerald-600 font-bold text-xl mb-2">15K - 25K</p>
               <p className="text-gray-500">4-8 weeks</p>
             </div>
             <div className="theme-card p-6 rounded-2xl border theme-border-secondary bg-emerald-50/50">
               <h3 className="text-lg font-bold mb-2 text-gray-900">Mid-Scale</h3>
-              <p className="text-emerald-600 font-bold text-xl mb-2">$50K - $100K</p>
+              <p className="text-emerald-600 font-bold text-xl mb-2">50K - 100K</p>
               <p className="text-gray-500">8-16 weeks</p>
             </div>
             <div className="theme-card p-6 rounded-2xl border theme-border-secondary">
@@ -199,17 +174,17 @@ const SoftwareDevelopment = () => {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50/50">
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ</h2>
+          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ's</h2>
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div key={i} className="theme-card p-6 rounded-2xl border theme-border-secondary">
                 <h3 className="text-lg font-bold mb-2 flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                  
                   {faq.q}
                 </h3>
-                <p className="text-gray-600 pl-8">{faq.a}</p>
+                <p className="text-gray-600">{faq.a}</p>
               </div>
             ))}
           </div>

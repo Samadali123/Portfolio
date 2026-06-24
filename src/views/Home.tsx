@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { Cloud, Brain, BarChart3, Code, ArrowRight, CheckCircle, Star, Zap, Shield, Users, Database } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -204,7 +205,7 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -212,31 +213,67 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-center space-y-8"
           >
-
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold theme-text-secondary leading-tight">
-              We deliver intelligent solutions and end-to-end software development for Modern Businesses. 
-              <span className="block bg-clip-text text-2xl sm:text-3xl lg:text-3xl mt-4 font-normal text-gray-700">
-                faster than an in-house team, at a fraction of the cost.
+            {/* Impactful Headline */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold theme-text-secondary leading-[1.1] tracking-tight max-w-4xl mx-auto">
+              We Understand Technology,
+              <span className="block mt-2 bg-gradient-to-r from-emerald-700 via-emerald-800 to-green-900 bg-clip-text text-transparent">
+                So You Don't Have To.
               </span>
             </h1>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 max-w-lg mx-auto sm:max-w-none">
               <Link
                 href="/contact"
-                className="px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl theme-shadow-secondary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-2"
+                className="px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl theme-shadow-secondary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-2 group w-full sm:w-auto"
               >
-                <span>Get a Free Consultation</span>
-                <ArrowRight className="w-5 h-5" />
+                <span>Book a Free Roadmap Session</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/portfolio"
-                className="px-8 py-4 bg-transparent border-2 border text-theme-secondary rounded-3xl font-semibold hover:bg-theme-secondary hover:theme-text-secondary transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-2"
+                className="px-8 py-4 bg-transparent border-2 theme-border-secondary text-[var(--color-secondary)] rounded-3xl font-semibold hover:bg-[var(--color-secondary)] hover:text-white transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-2 w-full sm:w-auto"
               >
                 <span>See Our Work</span>
               </Link>
             </div>
+
+            {/* Psychological Trust Markers */}
+            <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-2 text-xs font-medium text-gray-500 pt-1">
+              <span className="flex items-center gap-1">✓ MVP in 4 Weeks</span>
+              <span className="flex items-center gap-1">✓ 99.9% Uptime SLA</span>
+              <span className="flex items-center gap-1">✓ No Lock-in Contracts</span>
+            </div>
           </motion.div>
         </div>
       </section>
+
+      {/* Infinite Horizontal Text Scroller */}
+      <div className="w-full border-y border-emerald-800/10 bg-emerald-800/5 py-4 overflow-hidden mb-8">
+        <div className="marquee-wrapper marquee-mask">
+          <div className="marquee-content font-bold uppercase tracking-wider text-xs sm:text-sm theme-text-secondary">
+            {/* First Set of Items */}
+            <span className="flex items-center gap-2 whitespace-nowrap">Custom SaaS Platforms</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">System Automation</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Intelligent AI Agents</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Cloud Infrastructure</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">99.9% Uptime SLA</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">MVP in 4 Weeks</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Real-time Data Pipelines</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">AI Chatbots & RAG</span>
+            
+            {/* Second Set of Items (Clone for continuous loop) */}
+            <span className="flex items-center gap-2 whitespace-nowrap">Custom SaaS Platforms</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">System Automation</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Intelligent AI Agents</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Cloud Infrastructure</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">99.9% Uptime SLA</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">MVP in 4 Weeks</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Real-time Data Pipelines</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">AI Chatbots & RAG</span>
+          </div>
+        </div>
+      </div>
 
       {/* Services Preview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -301,7 +338,7 @@ const Home = () => {
                 className="text-center"
               >
                 <div className="w-16 h-16 theme-bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg theme-shadow-secondary">
-                  <item.icon className="w-8 h-8 text-white" />
+                  <item.icon className="w-8 h-8 text-white" /> 
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>

@@ -91,7 +91,7 @@ const Cloud = () => {
       </section>
 
       {/* Cloud Partners */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50/50">
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold theme-text-secondary mb-10">Cloud Partners</h2>
           <div className="flex flex-wrap justify-center gap-8 text-2xl font-bold text-gray-400 mb-8">
@@ -111,7 +111,7 @@ const Cloud = () => {
             {process.map((p, i) => (
               <div key={i} className="flex gap-4 items-start theme-card p-6 rounded-2xl border theme-border-secondary shadow-md">
                 <div className="w-12 h-12 rounded-full theme-bg-secondary text-white flex items-center justify-center shrink-0 font-bold text-xl">
-                  Step {i + 1}
+                  {i + 1}
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-1">{p.title}</h3>
@@ -123,59 +123,6 @@ const Cloud = () => {
         </div>
       </section>
 
-      {/* Cost Savings & Uptime SLA */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-theme-secondary/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold theme-text-secondary mb-6">Our clients reduce cloud spend by 35% in 90 days</h2>
-              <div className="theme-card p-8 rounded-2xl shadow-md border theme-border-secondary space-y-4">
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-700">Right-size EC2 instances</span>
-                  <span className="text-emerald-600 font-bold">-20%</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-700">Use Reserved Instances</span>
-                  <span className="text-emerald-600 font-bold">-10%</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-700">Optimize storage</span>
-                  <span className="text-emerald-600 font-bold">-5%</span>
-                </div>
-                <div className="flex justify-between items-center border-b pb-4">
-                  <span className="font-semibold text-gray-700">Remove waste</span>
-                  <span className="text-emerald-600 font-bold">-5%</span>
-                </div>
-                <div className="flex justify-between items-center pt-2">
-                  <span className="font-bold text-xl text-gray-900">Total Savings</span>
-                  <span className="text-emerald-600 font-bold text-xl">40% + better performance</span>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold theme-text-secondary mb-6">Enterprise-Grade Guarantees</h2>
-              <div className="grid gap-4">
-                <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
-                  <h3 className="font-bold text-lg mb-1">99.9% Uptime SLA</h3>
-                  <p className="text-sm text-gray-600">Only 43 minutes downtime per month</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
-                  <h3 className="font-bold text-lg mb-1">24-Hour Response Time</h3>
-                  <p className="text-sm text-gray-600">Urgent issues fixed same-day</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
-                  <h3 className="font-bold text-lg mb-1">5-Minute Alert Response</h3>
-                  <p className="text-sm text-gray-600">Any anomaly detected, team alerted automatically</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
-                  <h3 className="font-bold text-lg mb-1">Redundancy Across AZs</h3>
-                  <p className="text-sm text-gray-600">Your data replicated across availability zones</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Case Studies */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
@@ -183,24 +130,24 @@ const Cloud = () => {
           <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">Case Studies</h2>
           <div className="grid sm:grid-cols-2 gap-8">
             <div className="theme-card p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Cloud Migration - Logistics</h3>
+              <h3 className="text-xl font-bold mb-4">FallahTrips - Cloud-Native Travel Platform</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge:</strong> On-premise servers costing $50K/month, unreliable uptime.</p>
-                <p><strong className="text-gray-900">Solution:</strong> Migrated to AWS with auto-scaling, RDS, CloudFront CDN.</p>
-                <p><strong className="text-gray-900">Result:</strong> 40% cost reduction ($20K/month), 99.99% uptime, 3x faster load times.</p>
-                <p><strong className="text-gray-900">Tech:</strong> AWS EC2, RDS, CloudFront, CloudFormation.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Delivering a responsive AI application capable of serving users across different locations.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Built and deployed a cloud-hosted architecture with scalable APIs, managed databases, and modern frontend infrastructure.</p>
+                <p><strong className="text-gray-900">Result: </strong>Achieved reliable performance, streamlined deployments, and simplified platform management.</p>
+                <p><strong className="text-gray-900">Tech: </strong>Supabase, FastAPI, React, Vercel, CI/CD</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
             <div className="theme-card p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">DevOps Pipeline Automation</h3>
+              <h3 className="text-xl font-bold mb-4">Gatherly - Scalable Real-Time Infrastructure</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge:</strong> No CI/CD, manual deployments causing frequent outages.</p>
-                <p><strong className="text-gray-900">Solution:</strong> Implemented GitHub Actions + Docker + ECS deployment pipeline.</p>
-                <p><strong className="text-gray-900">Result:</strong> Deployments in 2 minutes vs 2 hours, 0 deployment failures in 6 months.</p>
-                <p><strong className="text-gray-900">Tech:</strong> GitHub Actions, Docker, AWS ECS, CloudFormation.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Real-time communication systems require stable infrastructure and low-latency connections</p>
+                <p><strong className="text-gray-900">Solution: </strong>Engineered a cloud-ready architecture supporting messaging, room management, and live collaboration features.</p>
+                <p><strong className="text-gray-900">Result: </strong>Delivered a reliable environment for real-time engagement and collaborative experiences.</p>
+                <p><strong className="text-gray-900">Tech: </strong>Node.js, Socket.IO, LiveKit, Supabase.</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
@@ -211,17 +158,17 @@ const Cloud = () => {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50/50">
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ</h2>
+          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ's</h2>
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div key={i} className="theme-card p-6 rounded-2xl border theme-border-secondary">
                 <h3 className="text-lg font-bold mb-2 flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                  
                   {faq.q}
                 </h3>
-                <p className="text-gray-600 pl-8">{faq.a}</p>
+                <p className="text-gray-600">{faq.a}</p>
               </div>
             ))}
           </div>

@@ -96,7 +96,7 @@ const AISolutions = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50/50">
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">Use Cases by Industry</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -136,15 +136,15 @@ const AISolutions = () => {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold theme-text-secondary mb-10">Real Results</h2>
           <div className="grid gap-6 sm:grid-cols-3">
-            <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
+            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
               <h3 className="text-4xl font-bold text-emerald-600 mb-2">300%</h3>
               <p className="text-gray-700 font-medium">Efficiency gain for a logistics client in 8 weeks</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
+            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
               <h3 className="text-4xl font-bold text-emerald-600 mb-2">95%</h3>
               <p className="text-gray-700 font-medium">Reduction in manual data entry for finance team</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
+            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
               <h3 className="text-4xl font-bold text-emerald-600 mb-2">70%</h3>
               <p className="text-gray-700 font-medium">Inquiries handled automatically by support bots with 92% CSAT</p>
             </div>
@@ -152,17 +152,7 @@ const AISolutions = () => {
         </div>
       </section>
 
-      {/* Tech Stack */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-8">Tech Stack</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['OpenAI', 'Claude (Anthropic)', 'LangChain', 'Python', 'TensorFlow', 'AWS Bedrock', 'Pinecone', 'ChromaDB'].map((t) => (
-              <span key={t} className="px-4 py-2 bg-gray-100 rounded-full font-medium text-gray-700 border border-gray-200">{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+  
 
       {/* Case Studies */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
@@ -170,24 +160,24 @@ const AISolutions = () => {
           <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">Case Studies</h2>
           <div className="grid sm:grid-cols-2 gap-8">
             <div className="theme-card p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Logistics AI Automation</h3>
+              <h3 className="text-xl font-bold mb-4">Aetheris ERP AI - Enterprise Automation Platform</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge:</strong> High-volume support queries slowing down operations.</p>
-                <p><strong className="text-gray-900">Solution:</strong> Custom RAG pipeline connecting KB to GPT-4.</p>
-                <p><strong className="text-gray-900">Result:</strong> 60% reduction in response time.</p>
-                <p><strong className="text-gray-900">Tech:</strong> LangChain, OpenAI, Pinecone.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Businesses struggled with disconnected operations, manual workflows, and scattered information systems.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Designed an AI-powered ERP ecosystem integrating workflow automation, intelligent search, document processing, and conversational AI..</p>
+                <p><strong className="text-gray-900">Result: </strong>Enabled centralized business operations and faster access to organizational knowledge</p>
+                <p><strong className="text-gray-900">Tech: </strong> Next.js, FastAPI, LangChain, GenAI, Redis, Celery.</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
             <div className="theme-card p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Fintech Data Extraction</h3>
+              <h3 className="text-xl font-bold mb-4">Lead Magnet AI - Intelligent Lead Research Platform</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge:</strong> Manual invoice processing causing delays.</p>
-                <p><strong className="text-gray-900">Solution:</strong> Document intelligence OCR and entity extraction.</p>
-                <p><strong className="text-gray-900">Result:</strong> 95% reduction in manual entry, saving 40 hours/week.</p>
-                <p><strong className="text-gray-900">Tech:</strong> Python, AWS Textract, Claude.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Sales teams spent significant time researching prospects and preparing outreach data.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Developed an AI-powered lead generation engine capable of company research, data enrichment, and automated report creation.</p>
+                <p><strong className="text-gray-900">Result: </strong>Streamlined prospect analysis and reduced manual lead qualification efforts</p>
+                <p><strong className="text-gray-900">Tech: </strong>React, FastAPI, LangChain, GenAI, Razorpay</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
@@ -198,17 +188,17 @@ const AISolutions = () => {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50/50">
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ</h2>
+          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ's</h2>
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div key={i} className="theme-card p-6 rounded-2xl border theme-border-secondary">
                 <h3 className="text-lg font-bold mb-2 flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                
                   {faq.q}
                 </h3>
-                <p className="text-gray-600 pl-8">{faq.a}</p>
+                <p className="text-gray-600">{faq.a}</p>
               </div>
             ))}
           </div>

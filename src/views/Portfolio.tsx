@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -101,6 +101,16 @@ const Portfolio = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isHoveringVideo, setIsHoveringVideo] = useState(false);
 
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % portfolioItems.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+
   const currentProject = portfolioItems[currentIndex];
   const hasVideo = Boolean(currentProject.videoPath);
 
@@ -127,7 +137,7 @@ const Portfolio = () => {
               transition={{ duration: 0.4, ease: "easeInOut" }}
               className="rounded-[3rem] overflow-hidden shadow-sm border"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[500px]">
+              <div className="grid grid-cols-1 lg:grid-cols-2 min-h-auto lg:min-h-[500px]">
                 {/* VIDEO SECTION */}
                 <div
                   className="relative aspect-video lg:aspect-auto bg-slate-900 cursor-pointer overflow-hidden m-4 lg:m-6 rounded-[2.5rem]"
@@ -158,17 +168,17 @@ const Portfolio = () => {
                 </div>
 
                 {/* CONTENT SECTION */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
+                <div className="p-5 sm:p-6 lg:p-12 flex flex-col justify-center">
                   <span className="inline-block w-fit px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest bg-[#0C4B2A]/10 text-[#0C4B2A] mb-6">
                     {currentProject.industry}
                   </span>
 
-                  <h2 className="text-4xl lg:text-5xl font-bold text-[#0C4B2A] mb-6">{currentProject.title}</h2>
+                  <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-[#0C4B2A] mb-4">{currentProject.title}</h2>
 
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6">{currentProject.description}</p>
+                  <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-4 line-clamp-2 lg:line-clamp-none">{currentProject.description}</p>
 
                   {/* NEW: Technology Tags Chips */}
-                  <div className="flex flex-wrap gap-2 mb-10">
+                  <div className="hidden lg:flex flex-wrap gap-2 mb-10">
                     {currentProject.technologies?.map((tech, index) => (
                       <span
                         key={index}
@@ -179,11 +189,11 @@ const Portfolio = () => {
                     ))}
                   </div>
 
-                  <div className="flex flex-wrap gap-4">
-                    <a href={currentProject.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center px-8 py-4 bg-[#0C4B2A] text-white rounded-full font-bold hover:bg-[#08361e] transition-all">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a href={currentProject.liveUrl} target="_blank" rel="noopener noreferrer" className="flex justify-center items-center px-6 py-3 bg-[#0C4B2A] text-white rounded-full font-bold hover:bg-[#08361e] transition-all">
                       View Live Project <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
-                    <Link href="/contact" className="flex items-center px-8 py-4 border border-[#0C4B2A] rounded-full font-semibold text-[#0C4B2A] hover:bg-[#0C4B2A] hover:text-white transition-all ease-in-out">
+                    <Link href="/contact" className="flex justify-center items-center px-6 py-3 border border-[#0C4B2A] rounded-full font-semibold text-[#0C4B2A] hover:bg-[#0C4B2A] hover:text-white transition-all ease-in-out">
                       <MessageSquare className="w-4 h-4 mr-2" /> Discuss Similar Work
                     </Link>
                   </div>
@@ -192,8 +202,23 @@ const Portfolio = () => {
             </motion.div>
           </AnimatePresence>
 
+
+          <div className="flex lg:hidden justify-center gap-2 mt-6">
+            {portfolioItems.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${currentIndex === index
+                  ? 'w-8 bg-[#0C4B2A]'
+                  : 'w-2 bg-gray-300'
+                  }`}
+              />
+            ))}
+          </div>
+
+
           {/* CONTROLS & PAGINATION */}
-          <div className="mt-12 w-full flex items-center justify-center">
+          <div className="hidden lg:flex mt-12 w-full items-center justify-center">
             {/* Changed: Removed w-full here and added justify-center */}
             <div className="flex gap-6 justify-center">
               <button

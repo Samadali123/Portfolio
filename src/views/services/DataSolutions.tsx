@@ -89,14 +89,14 @@ const DataSolutions = () => {
       </section>
 
       {/* How it Works */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50/50">
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">How It Works</h2>
           <div className="space-y-6">
             {process.map((p, i) => (
               <div key={i} className="flex gap-4 items-start theme-card p-6 rounded-2xl border theme-border-secondary shadow-md">
                 <div className="w-12 h-12 rounded-full theme-bg-secondary text-white flex items-center justify-center shrink-0 font-bold text-xl">
-                  Step {i + 1}
+                  {i + 1}
                 </div>
                 <div>
                   <h3 className="text-xl font-bold mb-1">{p.title}</h3>
@@ -109,39 +109,27 @@ const DataSolutions = () => {
         </div>
       </section>
 
-      {/* Tech Stack */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-10">Tech Stack</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {['Python', 'SQL', 'Scala', 'dbt', 'Airflow', 'Apache Spark', 'Kafka', 'Snowflake', 'BigQuery', 'Redshift', 'PostgreSQL', 'Tableau', 'Power BI', 'Looker', 'AWS', 'Google Cloud', 'Azure'].map((t) => (
-              <span key={t} className="px-4 py-2 bg-gray-100 rounded-full font-medium text-gray-700 border border-gray-200">{t}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ROI / Results */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 bg-theme-secondary/5">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold theme-text-secondary mb-4">Our clients achieve:</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-10">
-            <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
+            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
               <h3 className="text-3xl font-bold text-emerald-600 mb-2">60%+</h3>
               <p className="text-gray-900 font-semibold mb-2">Reduction in reporting time</p>
               <p className="text-sm text-gray-500">Automated dashboards vs manual Excel = hours saved weekly</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
+            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
               <h3 className="text-3xl font-bold text-emerald-600 mb-2">3x</h3>
               <p className="text-gray-900 font-semibold mb-2">Faster decision-making</p>
               <p className="text-sm text-gray-500">Real-time data instead of delayed reports</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
+            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
               <h3 className="text-3xl font-bold text-emerald-600 mb-2">40%</h3>
               <p className="text-gray-900 font-semibold mb-2">Cost reduction</p>
               <p className="text-sm text-gray-500">Optimized pipelines and cloud resource usage</p>
             </div>
-            <div className="bg-white p-6 rounded-2xl shadow-md border theme-border-secondary">
+            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
               <h3 className="text-3xl font-bold text-emerald-600 mb-2">95%+</h3>
               <p className="text-gray-900 font-semibold mb-2">Data accuracy</p>
               <p className="text-sm text-gray-500">Quality checks and validation on every pipeline</p>
@@ -156,24 +144,24 @@ const DataSolutions = () => {
           <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">Case Studies</h2>
           <div className="grid sm:grid-cols-2 gap-8">
             <div className="theme-card p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Retail BI Dashboard</h3>
+              <h3 className="text-xl font-bold mb-4">Lead Magnet AI - Data Intelligence Platform</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge:</strong> Manual reporting took 40 hours/week.</p>
-                <p><strong className="text-gray-900">Solution:</strong> Built automated pipeline + Power BI dashboard.</p>
-                <p><strong className="text-gray-900">Result:</strong> Saved 200 hours/month, enabled real-time decisions.</p>
-                <p><strong className="text-gray-900">Tech:</strong> Python, Airflow, BigQuery, Power BI.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Organizations lacked a centralized process for analyzing large prospect datasets.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Created a platform capable of processing CSV datasets, generating insights, and producing structured business reports</p>
+                <p><strong className="text-gray-900">Result: </strong>Improved visibility into lead data and accelerated decision-making processes</p>
+                <p><strong className="text-gray-900">Tech: </strong>FastAPI, React, LangChain, PostgreSQL.</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
             <div className="theme-card p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Financial Data Warehouse</h3>
+              <h3 className="text-xl font-bold mb-4">Aetheris ERP AI - Business Intelligence & Analytics</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge:</strong> Data scattered across 5 systems, no single source of truth.</p>
-                <p><strong className="text-gray-900">Solution:</strong> Built unified data warehouse with dbt + Snowflake.</p>
-                <p><strong className="text-gray-900">Result:</strong> Reduced reporting errors by 95%, improved audit compliance.</p>
-                <p><strong className="text-gray-900">Tech:</strong> Snowflake, dbt, Python.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Business data was spread across multiple departments, making reporting and analysis difficult.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Implemented data aggregation, AI-powered querying, and analytics workflows across operational systems.</p>
+                <p><strong className="text-gray-900">Result: </strong>Enabled faster access to operational insights and more informed business decisions.</p>
+                <p><strong className="text-gray-900">Tech: </strong>FastAPI, SQL, Redis, LangChain, Next.js.</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
@@ -184,17 +172,17 @@ const DataSolutions = () => {
       </section>
 
       {/* FAQ */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50/50">
+      <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ</h2>
+          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ's</h2>
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div key={i} className="theme-card p-6 rounded-2xl border theme-border-secondary">
                 <h3 className="text-lg font-bold mb-2 flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                
                   {faq.q}
                 </h3>
-                <p className="text-gray-600 pl-8">{faq.a}</p>
+                <p className="text-gray-600">{faq.a}</p>
               </div>
             ))}
           </div>

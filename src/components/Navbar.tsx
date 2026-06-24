@@ -70,7 +70,7 @@ const Navbar = () => {
                 key={link.path}
                 href={link.path}
                 className={`px-4 py-2 text-sm font-medium transition-all duration-200 border-b-2 ${pathname === link.path
-                  ? 'theme-text-secondary border-b-theme-secondary'
+                  ? 'theme-text-secondary border'
                   : 'text-gray-700 border-b-transparent hover:theme-text-secondary'
                   }`}
               >
