@@ -3,7 +3,7 @@ import Contact from '@/views/Contact';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Contact ASG Solutions to discuss software development, AI automation, data solutions, cloud strategy, or business technology consultation.',
+  description: 'Get a free consultation with our AI and cloud experts. Response within 24 hours. WhatsApp, email, or calendar booking.',
 };
 
 export default function Page() {
