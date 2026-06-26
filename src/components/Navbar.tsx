@@ -109,46 +109,53 @@ const Navbar = () => {
 
 
 
-
       {/* Mobile Menu */}
       <div
         id="mobile-navigation"
-        className={`md:hidden fixed left-0 right-0 top-20 z-[65] h-[calc(100dvh-5rem)] bg-[#0b251a] transition-all duration-300 ease-out ${
-          isMobileMenuOpen
+        className={`md:hidden fixed left-0 right-0 top-20 z-[65] h-[calc(100dvh-5rem)] transition-all duration-300 ease-out ${isMobileMenuOpen
             ? 'translate-y-0 opacity-100 pointer-events-auto'
             : '-translate-y-3 opacity-0 pointer-events-none'
-        }`}
+          }`}
       >
-        <div className="h-full overflow-y-auto px-6 py-6 space-y-3">
-          {navLinks.map((link) => {
-            const isActive = pathname === link.path;
-            return (
-              <Link
-                key={link.path}
-                href={link.path}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block px-4 py-4 rounded-r-xl text-base transition-all duration-300 border-l-4 ${isActive
-                  ? 'bg-white/10 text-white border-emerald-400 font-semibold translate-x-2'
-                  : 'text-gray-400 border-transparent hover:text-gray-200 hover:bg-white/5'
-                  }`}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
+        <div
+          className="h-full w-full"
+          style={{ background: 'var(--color-primary)' }}
+        >
+          <div className="h-full overflow-y-auto flex flex-col items-center justify-center px-6 py-6 space-y-2">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.path;
+              return (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block px-6 py-3 text-base text-center transition-all duration-200 ${isActive
+                      ? 'theme-text-secondary font-semibold'
+                      : 'text-gray-700 hover:theme-text-secondary'
+                    }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
 
-          {/* Action Button */}
-          <div className="pt-4">
-            <Link
-              href="/contact#appointment"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="block px-4 py-4 text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold text-center transition-colors shadow-lg active:scale-95"
-            >
-              Book a Demo
-            </Link>
+            {/* Action Button */}
+            <div className="pt-4">
+              <Link
+                href="/contact#appointment"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block px-8 py-3 text-white theme-bg-secondary hover:opacity-90 rounded-full font-medium text-center transition-all shadow-lg theme-shadow-secondary active:scale-95"
+              >
+                Book a Demo
+              </Link>
+            </div>
+
+           
           </div>
         </div>
       </div>
+
+
     </nav>
   );
 };

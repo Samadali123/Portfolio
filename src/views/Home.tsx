@@ -261,7 +261,7 @@ const Home = () => {
             <span className="flex items-center gap-2 whitespace-nowrap">MVP in 4 Weeks</span>
             <span className="flex items-center gap-2 whitespace-nowrap">Real-time Data Pipelines</span>
             <span className="flex items-center gap-2 whitespace-nowrap">AI Chatbots & RAG</span>
-            
+
             {/* Second Set of Items (Clone for continuous loop) */}
             <span className="flex items-center gap-2 whitespace-nowrap">Custom SaaS Platforms</span>
             <span className="flex items-center gap-2 whitespace-nowrap">System Automation</span>
@@ -298,16 +298,19 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link href={service.path}>
-                  <div className="group theme-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border theme-border-secondary">
-                    <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-7 h-7 text-secondary" />
-                    </div>
-                    <h3 className="text-xl font-bold theme-text-secondary mb-2">{service.title}</h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-
+              
+                <div className="group theme-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border theme-border-secondary">
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-7 h-7 text-secondary" />
                   </div>
-                </Link>
+                  <h3 className="text-xl font-bold theme-text-secondary mb-2">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+
+                  {/* Only Link wraps Read More */}
+                  <Link href={service.path} className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--color-secondary)] hover:gap-2 transition-all duration-200 cursor-pointer">
+                    Read More <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -338,7 +341,7 @@ const Home = () => {
                 className="text-center"
               >
                 <div className="w-16 h-16 theme-bg-secondary rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg theme-shadow-secondary">
-                  <item.icon className="w-8 h-8 text-white" /> 
+                  <item.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
@@ -361,7 +364,7 @@ const Home = () => {
             <p className="text-xl text-gray-600">Trusted by leading companies worldwide</p>
           </motion.div>
 
-      
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -403,7 +406,7 @@ const Home = () => {
         </div>
       </section>
 
-    
+
       {/*tech stack section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

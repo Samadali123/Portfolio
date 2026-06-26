@@ -90,6 +90,13 @@ body {
   color: var(--color-secondary) !important;
 }
 
+
+.date-input {
+  background-color: rgba(10, 87, 55, 0.08) !important;
+  border: 1.5px solid rgba(10, 87, 55, 0.25) !important;
+  /* color: var(--color-secondary) !important; */
+}
+
 .theme-input::placeholder {
   color: rgba(10, 87, 55, 0.55);
 }

@@ -251,7 +251,7 @@ const OpenPositions = () => {
             fd.set('github', normalizeUrl(github));
             fd.set('role', role);
 
-           
+
             const res = await fetch('/api/v1/applications', {
                 method: 'POST',
                 headers: {
@@ -433,11 +433,11 @@ const OpenPositions = () => {
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div className="space-y-2">
                                                 <label className="text-sm font-bold text-gray-700">Full Name</label>
-                                                <IconInput icon={User} required type="text" name="name" placeholder="John Doe" />
+                                                <IconInput icon={User} required type="text" name="name" placeholder="Your Kind Name" />
                                             </div>
                                             <div className="space-y-2">
                                                 <label className="text-sm font-bold text-gray-700">Email Address</label>
-                                                <IconInput icon={Mail} required type="email" name="email" placeholder="john@example.com" />
+                                                <IconInput icon={Mail} required type="email" name="email" placeholder="asg@example.com" />
                                             </div>
                                         </div>
 
@@ -448,8 +448,36 @@ const OpenPositions = () => {
                                                 <IconInput icon={GraduationCap} required type="text" name="college" placeholder="University Name" />
                                             </div>
                                             <div className="space-y-2">
-                                                <label className="text-sm font-bold text-gray-700">Year of Graduation</label>
-                                                <IconInput icon={Clock} required type="text" name="graduation_year" placeholder="e.g. 2024" />
+                                                <label className="text-sm font-bold text-gray-700">
+                                                    Year of Graduation
+                                                </label>
+
+                                                <div className="relative">
+                                                    <Clock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 theme-text-secondary pointer-events-none z-10" />
+
+                                                    <select
+                                                        name="graduation_year"
+                                                        required
+                                                        defaultValue=""
+                                                        className="w-full border bg-[#BDC7C1] p-3 pl-12 rounded-xl focus:outline-none  focus:ring-[#0A5737] transition-all appearance-none cursor-pointer"
+                                                    >
+                                                        <option value="" disabled>
+                                                            Select Graduation Year
+                                                        </option>
+
+                                                        {Array.from(
+                                                            { length: new Date().getFullYear() - 1989 },
+                                                            (_, i) => {
+                                                                const year = new Date().getFullYear() - i;
+                                                                return (
+                                                                    <option key={year} value={year}>
+                                                                        {year}
+                                                                    </option>
+                                                                );
+                                                            }
+                                                        )}
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -460,19 +488,47 @@ const OpenPositions = () => {
                                                 <RoleSelect value={role} onChange={setRole} />
                                             </div>
                                             <div className="space-y-2">
-                                                <label className="text-sm font-bold text-gray-700">Years of Experience</label>
-                                                <IconInput icon={BarChart} required type="text" name="experience" placeholder="e.g. 2+ years / Fresher" />
+                                                <label className="text-sm font-bold text-gray-700">
+                                                    Years of Experience
+                                                </label>
+
+                                                <div className="relative">
+                                                    <BarChart className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 theme-text-secondary pointer-events-none z-10" />
+
+                                                    <select
+                                                        name="experience"
+                                                        required
+                                                        defaultValue=""
+                                                        className="w-full border bg-[#BDC7C1] p-3 pl-12 rounded-xl focus:outline-none focus:ring-[#0A5737] transition-all appearance-none cursor-pointer"
+                                                    >
+                                                        <option value="" disabled>
+                                                            Select Experience
+                                                        </option>
+
+                                                        <option value="0">0 Years (Fresher)</option>
+                                                        <option value="1">1 Year</option>
+                                                        <option value="2">2 Years</option>
+                                                        <option value="3">3 Years</option>
+                                                        <option value="4">4 Years</option>
+                                                        <option value="5">5 Years</option>
+                                                        <option value="6">6 Years</option>
+                                                        <option value="7">7 Years</option>
+                                                        <option value="8">8 Years</option>
+                                                        <option value="9">9 Years</option>
+                                                        <option value="10">10+ Years</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
 
                                         {/* Row 4 — Portfolio + GitHub */}
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div className="space-y-2">
-                                                <label className="text-sm font-bold text-gray-700">Portfolio / Personal Link</label>
+                                                <label className="text-sm font-bold text-gray-700">Portfolio</label>
                                                 <IconInput
                                                     icon={LinkIcon} type="text" name="portfolio"
                                                     value={portfolio} onChange={e => setPortfolio((e.target as HTMLInputElement).value)}
-                                                    placeholder="samad.portfolio or https://..."
+                                                    placeholder="xyz.portfolio.com"
                                                 />
                                             </div>
                                             <div className="space-y-2">

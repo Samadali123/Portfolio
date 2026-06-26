@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useRef, useState } from 'react';
+import { FormEvent, useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CalendarCheck, CheckCircle, X, ChevronDown } from 'lucide-react';
 
@@ -204,7 +204,7 @@ const ContactForm = () => {
             name="name"
             required
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
-            placeholder="John Doe"
+            placeholder="Your Kind Name"
           />
 
         </div>
@@ -219,7 +219,7 @@ const ContactForm = () => {
             name="email"
             required
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
-            placeholder="john@example.com"
+            placeholder="asg@example.com"
           />
 
         </div>
@@ -270,7 +270,7 @@ const ContactForm = () => {
             id="phone"
             name="phone"
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
-            placeholder="+1 234 567 8900"
+            placeholder="+91 XXXX-XXXXXX"
           />
         </div>
 
@@ -324,6 +324,9 @@ const AppointmentForm = () => {
   const [selectedTime, setSelectedTime] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
 
+  const today = new Date();
+  today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  const minDate = today.toISOString().split('T')[0];
 
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -416,16 +419,19 @@ const AppointmentForm = () => {
           <label htmlFor="date" className="block text-sm font-medium theme-text-secondary mb-2">
             Preferred Date
           </label>
+
           <input
             type="date"
             id="date"
             name="date"
             required
-            min={new Date().toISOString().split('T')[0]}
-            className="w-full px-4 py-3 theme-input appointment-native-date rounded-xl focus:outline-none theme-focus-secondary transition-all cursor-pointer"
+            min={minDate}
+            className="w-full date-input p-3 rounded-xl focus:outline-none theme-focus-secondary transition-all cursor-pointer"
+            // className="w-full border bg-[#BDC7C1] p-3 rounded-xl"
           />
-
         </div>
+
+
 
         <div>
           <label htmlFor="time" className="block text-sm font-medium theme-text-secondary mb-2">
@@ -451,7 +457,7 @@ const AppointmentForm = () => {
             name="email"
             required
             className="w-full px-4 py-3 theme-input rounded-xl focus:outline-none theme-focus-secondary transition-all"
-            placeholder="john@example.com"
+            placeholder="asg@example.com"
           />
 
         </div>
@@ -489,6 +495,9 @@ const AppointmentForm = () => {
     </div>
   );
 };
+
+
+
 
 const Contact = () => {
   return (

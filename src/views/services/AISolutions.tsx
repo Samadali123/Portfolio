@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Bot, Cpu, FileText, BarChart, Link as LinkIcon, CheckCircle } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const AISolutions = () => {
+
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const services = [
     {
       icon: Bot,
@@ -59,7 +62,7 @@ const AISolutions = () => {
   return (
     <div className="min-h-screen pt-24 pb-20">
       <div className="fixed inset-0 -z-10 theme-page-bg"></div>
-      
+
       {/* Hero */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -152,7 +155,7 @@ const AISolutions = () => {
         </div>
       </section>
 
-  
+
 
       {/* Case Studies */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
@@ -188,17 +191,26 @@ const AISolutions = () => {
       </section>
 
       {/* FAQ */}
+    
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">FAQ's</h2>
-          <div className="space-y-6">
+          <h2 className="text-3xl font-bold theme-text-secondary mb-4 text-center">FAQ's</h2>
+          <p className="text-center text-gray-500 mb-10">
+            Looking for answers to your frequently asked questions? Check out our FAQ's section below to find.
+          </p>
+          <div>
             {faqs.map((faq, i) => (
-              <div key={i} className="theme-card p-6 rounded-2xl border theme-border-secondary">
-                <h3 className="text-lg font-bold mb-2 flex items-start gap-3">
-                
-                  {faq.q}
-                </h3>
-                <p className="text-gray-600">{faq.a}</p>
+              <div key={i} className="border-b theme-border-secondary">
+                <button
+                  className="w-full flex items-center justify-between py-5 text-left"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                >
+                  <h3 className="text-base font-medium theme-text-secondary">{faq.q}</h3>
+                  <span className="text-xl theme-text-secondary ml-4">{openFaq === i ? "−" : "+"}</span>
+                </button>
+                {openFaq === i && (
+                  <p className="text-black pb-5 pr-8">{faq.a}</p>
+                )}
               </div>
             ))}
           </div>
