@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Cloud, Brain, BarChart3, Code, ArrowRight, CheckCircle, Star, Zap, Shield, Users, Database } from 'lucide-react';
+import { Cloud, Brain, BarChart3, Code, ArrowRight, CheckCircle, Star, Zap, Shield, Settings, Database } from 'lucide-react';
 import { motion } from 'framer-motion';
 import {
   SiReact,
@@ -31,6 +31,7 @@ import {
   SiDatabricks
 } from 'react-icons/si';
 import defaultProfile from '../assets/images/DefaultProfile.png';
+import { start } from 'repl';
 
 const Home = () => {
 
@@ -41,18 +42,18 @@ const Home = () => {
   // Services, Testimonials, Why Choose Us, and Tech Stack data
   const services = [
     {
+      icon: Brain,
+      title: 'WhatsApp Automation',
+      description: 'Automate customer support, lead capture, follow-ups, appointment reminders, and order updates with intelligent WhatsApp workflows that integrate seamlessly with your existing business tools.',
+      path: '/services/ai-solutions',
+      gradient: 'from-purple-500 to-pink-400',
+    },
+    {
       icon: Code,
       title: 'Software Development',
       description: 'SaaS platforms, internal tools, and client portals that scale delivered in weeks, not months.',
       path: '/services/software-development',
       gradient: 'from-green-500 to-emerald-400',
-    },
-    {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Automate workflows that slow your team down. We build AI systems that integrate with your existing tools — no infrastructure overhaul needed.',
-      path: '/services/ai-solutions',
-      gradient: 'from-purple-500 to-pink-400',
     },
     {
       icon: BarChart3,
@@ -72,59 +73,60 @@ const Home = () => {
 
 
 
-
-  // For Careers Page
   const testimonials = [
     {
       name: 'Raj Kumar',
-      role: 'Logistics AI Lead, Leading Logistics Company, UAE',
+      role: 'Business Owner',
       image: 'https://ui-avatars.com/api/?name=Raj+Kumar&background=0D8ABC&color=fff',
-      content: "ASG Solutions built our RAG system in 6 weeks. Quality exceeded our expectations.",
+      content:
+        'The WhatsApp automation setup was straightforward and saved our team a lot of manual follow-up work. Customer response times improved almost immediately.',
       rating: 5,
     },
     {
       name: 'Priya Sharma',
-      role: 'Support Director, Logistics AI Co.',
+      role: 'Operations Manager',
       image: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=FF8A65&color=fff',
-      content: (
-        <>
-          ASG Solutions built an RAG chatbot that reduced our support response time by <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline">60%</Link>. Implementation was seamless and the team provided excellent training.
-        </>
-      ),
-      rating: 5,
+      content:
+        'What impressed us most was how quickly the workflows were customized for our process. The automation handled repetitive queries while our team focused on higher-value tasks.',
+      rating: 4,
     },
     {
       name: 'Vikram Singh',
-      role: 'VP of Operations, Top E-Commerce Platform, India',
+      role: 'Founder',
       image: 'https://ui-avatars.com/api/?name=Vikram+Singh&background=4CAF50&color=fff',
-      content: "Our data pipelines are now 3x faster, providing real-time visibility into inventory. The migration was flawless with zero downtime.",
-      rating: 5,
+      content:
+        'We needed a combination of website improvements and business automation. The solution was practical, easy to use, and helped streamline our day-to-day operations.',
+      rating: 4,
     },
   ];
 
 
-
   // For Careers Page
+
   const whyChooseUs = [
     {
+      icon: Settings,
+      title: 'One Partner for Everything',
+      description:
+        'Whether you need WhatsApp automation, AI solutions, custom websites, dashboards, or data-driven applications—we build it all under one roof.',
+    },
+    {
       icon: Zap,
-      title: 'MVP in 4 Weeks',
-      description: 'Prove your concept before full build. Our agile process removes months of waterfall planning.',
+      title: 'Automation That Saves Time',
+      description:
+        'Automate customer support, lead generation, follow-ups, internal workflows, and repetitive business tasks to boost productivity.',
     },
     {
       icon: Shield,
-      title: '99.9% Uptime SLA',
-      description: 'Enterprise-grade infrastructure. Every deployment monitored. Guaranteed response within 24 hours.',
-    },
-    {
-      icon: Users,
-      title: 'Dedicated PM on Every Project',
-      description: 'Not a shared resource. Your dedicated project manager owns timeline, quality, and communication.',
+      title: 'Built for Scale & Security',
+      description:
+        'Every solution is designed with secure integrations, clean architecture, and scalability to support your business as it grows.',
     },
     {
       icon: CheckCircle,
-      title: '24hr Response Guarantee',
-      description: 'During business hours and weekends. Questions answered fast. Blockers removed same-day.',
+      title: 'Long-Term Technology Partner',
+      description:
+        'Beyond launch, we provide maintenance, feature enhancements, performance monitoring, and dedicated technical support.',
     },
   ];
 
@@ -214,11 +216,11 @@ const Home = () => {
             className="text-center space-y-8"
           >
             {/* Impactful Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold theme-text-secondary leading-[1.1] tracking-tight max-w-4xl mx-auto">
-              We Understand Technology,
-              <span className="block mt-2 bg-gradient-to-r from-emerald-700 via-emerald-800 to-green-900 bg-clip-text text-transparent">
-                So You Don't Have To.
-              </span>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold theme-text-secondary leading-none tracking-tight max-w-4xl mx-auto">
+              Never Miss a Customer Message Again
+              <p className="block mt-7 bg-gradient-to-r from-emerald-700 via-emerald-800 to-green-900 bg-clip-text text-transparent text-xl sm:text-3xl lg:text-2xl font-semibold">
+                WhatsApp Automation for Growing Businesses
+              </p>
             </h1>
 
             {/* CTA Buttons */}
@@ -227,7 +229,7 @@ const Home = () => {
                 href="/contact"
                 className="px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl theme-shadow-secondary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-2 group w-full sm:w-auto"
               >
-                <span>Book a Free Roadmap Session</span>
+                <span>Book a Free 15-Min WhatsApp Demo</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -240,9 +242,9 @@ const Home = () => {
 
             {/* Psychological Trust Markers */}
             <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-2 text-xs font-medium text-gray-500 pt-1">
-              <span className="flex items-center gap-1">✓ MVP in 4 Weeks</span>
-              <span className="flex items-center gap-1">✓ 99.9% Uptime SLA</span>
-              <span className="flex items-center gap-1">✓ No Lock-in Contracts</span>
+              <span className="flex items-center gap-1">✓  Live in 5 Days</span>
+              <span className="flex items-center gap-1">✓  70% Fewer Manual Replies</span>
+              <span className="flex items-center gap-1">✓  No-Code, Easy to Edit</span>
             </div>
           </motion.div>
         </div>
@@ -253,6 +255,11 @@ const Home = () => {
         <div className="marquee-wrapper marquee-mask">
           <div className="marquee-content font-bold uppercase tracking-wider text-xs sm:text-sm theme-text-secondary">
             {/* First Set of Items */}
+
+
+            <span className="flex items-center gap-2 whitespace-nowrap">Whatsapp Business Automation</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Email Marketing Automation</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Lead Generation / CRM </span>
             <span className="flex items-center gap-2 whitespace-nowrap">Custom SaaS Platforms</span>
             <span className="flex items-center gap-2 whitespace-nowrap">System Automation</span>
             <span className="flex items-center gap-2 whitespace-nowrap">Intelligent AI Agents</span>
@@ -263,6 +270,9 @@ const Home = () => {
             <span className="flex items-center gap-2 whitespace-nowrap">AI Chatbots & RAG</span>
 
             {/* Second Set of Items (Clone for continuous loop) */}
+            <span className="flex items-center gap-2 whitespace-nowrap">Whatsapp Business Automation</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Email Marketing Automation</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Lead Generation / CRM </span>
             <span className="flex items-center gap-2 whitespace-nowrap">Custom SaaS Platforms</span>
             <span className="flex items-center gap-2 whitespace-nowrap">System Automation</span>
             <span className="flex items-center gap-2 whitespace-nowrap">Intelligent AI Agents</span>
@@ -298,7 +308,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-              
+
                 <div className="group theme-card rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border theme-border-secondary">
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-7 h-7 text-secondary" />

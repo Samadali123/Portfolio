@@ -1,7 +1,7 @@
 'use client';
 
 import { Fragment, useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, Calendar, Clock, Sparkles } from 'lucide-react';
+import { MessageCircle, X, Send, Calendar, Clock, Sparkles, IndianRupee, PlayCircle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 interface Message {
@@ -110,6 +110,8 @@ const Chatbot = () => {
   }, [isOpen]);
 
   const quickActions = [
+    { label: 'WhatsApp Automation Pricing', icon: IndianRupee },
+    { label: 'See a Live Demo', icon: PlayCircle },
     { label: 'Book Appointment', icon: Calendar },
     { label: 'Reschedule Meeting', icon: Clock },
     { label: 'Our Services', icon: MessageCircle },
@@ -184,18 +186,16 @@ const Chatbot = () => {
     <>
       {/* Subtle Blur Overlay */}
       <div
-        className={`fixed inset-0 z-[80] bg-black/5 backdrop-blur-[2px] transition-opacity duration-300 pointer-events-none ${
-          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'
-        }`}
+        className={`fixed inset-0 z-[80] bg-black/5 backdrop-blur-[2px] transition-opacity duration-300 pointer-events-none ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'
+          }`}
         onClick={() => setIsOpen(false)}
       />
 
       {/* Floating Toggle Button - Disappears when chat is open */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`hover:cursor-pointer fixed bottom-5 right-5 z-[100] w-14 h-14 md:bottom-6 md:right-6 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 shadow-xl bg-[#0C4B2A] hover:scale-105 active:scale-95 ${
-          isOpen ? 'opacity-0 scale-0 pointer-events-none' : 'opacity-100 scale-100'
-        }`}
+        className={`hover:cursor-pointer fixed bottom-5 right-5 z-[100] w-14 h-14 md:bottom-6 md:right-6 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 shadow-xl bg-[#0C4B2A] hover:scale-105 active:scale-95 ${isOpen ? 'opacity-0 scale-0 pointer-events-none' : 'opacity-100 scale-100'
+          }`}
         aria-label="Open Chat"
       >
         <div className="relative">
@@ -206,14 +206,12 @@ const Chatbot = () => {
 
       {/* Chat Window */}
       <div
-        className={`fixed inset-0 z-[90] flex items-end justify-center md:items-end md:justify-end md:p-6 transition-all duration-500 pointer-events-none ${
-          isOpen ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`fixed inset-0 z-[90] flex items-end justify-center md:items-end md:justify-end md:p-6 transition-all duration-500 pointer-events-none ${isOpen ? 'opacity-100' : 'opacity-0'
+          }`}
       >
         <div
-          className={`h-[100dvh] w-full bg-white shadow-2xl flex flex-col overflow-hidden transition-all duration-500 md:h-[650px] md:max-h-[85vh] md:w-[420px] md:rounded-3xl ${
-            isOpen ? 'translate-y-0 scale-100' : 'translate-y-12 scale-95'
-          } ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+          className={`h-[100dvh] w-full bg-white shadow-2xl flex flex-col overflow-hidden transition-all duration-500 md:h-[650px] md:max-h-[85vh] md:w-[420px] md:rounded-3xl ${isOpen ? 'translate-y-0 scale-100' : 'translate-y-12 scale-95'
+            } ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
         >
           {/* Header */}
           <div className="bg-[#0C4B2A] p-5 flex items-center gap-4 relative overflow-hidden">
@@ -244,9 +242,8 @@ const Chatbot = () => {
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`flex items-end gap-3 ${
-                  message.sender === 'user' ? 'flex-row-reverse' : 'flex-row'
-                }`}
+                className={`flex items-end gap-3 ${message.sender === 'user' ? 'flex-row-reverse' : 'flex-row'
+                  }`}
               >
                 {message.sender === 'bot' && (
                   <div className="w-8 h-8 bg-[#0C4B2A] rounded-xl flex items-center justify-center shrink-0 shadow-lg shadow-[#0C4B2A]/10">
@@ -254,11 +251,10 @@ const Chatbot = () => {
                   </div>
                 )}
                 <div
-                  className={`max-w-[85%] px-5 py-3.5 rounded-2xl shadow-sm text-[15px] leading-relaxed relative ${
-                    message.sender === 'user'
+                  className={`max-w-[85%] px-5 py-3.5 rounded-2xl shadow-sm text-[15px] leading-relaxed relative ${message.sender === 'user'
                       ? 'bg-[#0C4B2A] text-white rounded-br-none'
                       : 'bg-white text-gray-800 border border-gray-100 rounded-bl-none'
-                  }`}
+                    }`}
                 >
                   <div className="whitespace-pre-line">
                     {message.sender === 'bot' ? renderFormattedText(message.text) : message.text}
@@ -275,9 +271,8 @@ const Chatbot = () => {
                     </button>
                   )}
                   <p
-                    className={`text-[10px] mt-2 font-medium ${
-                      message.sender === 'user' ? 'text-white/50 text-right' : 'text-gray-400'
-                    }`}
+                    className={`text-[10px] mt-2 font-medium ${message.sender === 'user' ? 'text-white/50 text-right' : 'text-gray-400'
+                      }`}
                   >
                     {hasHydrated && message.timestamp ? formatTime(message.timestamp) : ''}
                   </p>
@@ -328,11 +323,10 @@ const Chatbot = () => {
               <button
                 onClick={handleSend}
                 disabled={!inputValue.trim() || isTyping}
-                className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 shrink-0 ${
-                  !inputValue.trim() || isTyping
+                className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 shrink-0 ${!inputValue.trim() || isTyping
                     ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
                     : 'bg-[#0C4B2A] text-white hover:scale-105 active:scale-95 shadow-lg shadow-[#0C4B2A]/20'
-                }`}
+                  }`}
               >
                 <Send className="w-5 h-5" />
               </button>

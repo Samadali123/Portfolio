@@ -8,55 +8,89 @@ import { useState } from 'react';
 const AISolutions = () => {
 
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
   const services = [
     {
       icon: Bot,
-      title: 'AI Chatbots',
-      description: 'Customer support, internal knowledge assistants, document Q&A.',
+      title: 'AI WhatsApp Chatbots',
+      description: 'Answer customer questions instantly using AI-powered conversations.',
     },
     {
       icon: Cpu,
-      title: 'Process Automation',
-      description: 'Invoice processing, data extraction, workflow automation.',
+      title: 'Lead Qualification',
+      description: 'Automatically capture, qualify, and assign leads to your sales team.',
     },
     {
       icon: FileText,
-      title: 'Document Intelligence',
-      description: 'OCR, entity extraction, classification at scale.',
+      title: 'Appointment Booking',
+      description: 'Schedule meetings, consultations, and reminders directly through WhatsApp.',
     },
     {
       icon: BarChart,
-      title: 'Predictive Analytics',
-      description: 'Demand forecasting, churn prediction, anomaly detection.',
+      title: 'Order & Customer Support',
+      description: 'Provide order updates, FAQs, complaint handling, and post-sale support.',
     },
     {
       icon: LinkIcon,
-      title: 'LLM Integration',
-      description: 'Integrate Claude, GPT-4, or open-source models into your apps.',
+      title: 'CRM & Business Integrations',
+      description: 'Connect WhatsApp with CRMs, Google Sheets, payment gateways, and business applications.',
     },
   ];
 
   const useCases = [
-    { title: 'Healthcare', desc: 'Patient support bots, clinical trial matching, appointment automation.' },
-    { title: 'Logistics', desc: 'Route optimization, cargo tracking, damage prediction.' },
-    { title: 'Finance', desc: 'Fraud detection, KYC automation, compliance reporting.' },
-    { title: 'E-Commerce', desc: 'Product recommendations, customer service bots, inventory forecasting.' },
+    {
+      title: 'Real Estate',
+      desc: 'Capture property inquiries, schedule site visits, and automate buyer follow-ups.',
+    },
+    {
+      title: 'Clinics & Hospitals',
+      desc: 'Appointment booking, reminders, patient support, and prescription follow-ups.',
+    },
+    {
+      title: 'Education',
+      desc: 'Student inquiries, admission support, fee reminders, and course updates.',
+    },
+    {
+      title: 'E-Commerce',
+      desc: 'Order confirmation, shipping updates, abandoned cart recovery, and customer support.',
+    },
   ];
 
   const process = [
-    { step: '1', title: 'Audit Your Workflow', desc: 'We analyze your processes, data, and pain points (Week 1)' },
-    { step: '2', title: 'Build Custom AI', desc: 'Model training, integration, testing with your real data (Weeks 2-4)' },
-    { step: '3', title: 'Train & Deploy', desc: 'Deployment, monitoring, team training (Week 5)' },
+    { step: '1', title: 'Understand Your Business', desc: 'Understand your customer journey and identify repetitive conversations.' },
+    { step: '2', title: 'Build Your WhatsApp Automation', desc: 'Design AI-powered WhatsApp workflows integrated with your existing tools.' },
+    { step: '3', title: 'Launch & Optimize', desc: 'Deploy, monitor, optimize, and continuously improve automation performance.' },
   ];
 
   const faqs = [
-    { q: 'Is my data safe when we send it to OpenAI/Claude?', a: 'Yes. We follow strict data handling policies. We can deploy private instances to ensure data retention and SOC2 compliance.' },
-    { q: 'Do I need existing AI infrastructure?', a: 'No. We handle everything from data setup to deployment. Works with on-premise or cloud.' },
-    { q: 'Can you integrate with my existing CRM/ERP?', a: 'Yes. Our AI systems integrate with Salesforce, SAP, custom databases, APIs, etc.' },
-    { q: 'How long does it take?', a: '4-8 weeks for a production system. MVP in 2 weeks.' },
-    { q: 'What if it doesn\'t work as expected?', a: 'We offer 30-day optimization period with no extra cost. Adjustments included.' },
-    { q: 'Can you train the model on our proprietary data?', a: 'Yes. We handle RAG, fine-tuning, and private deployments.' },
-    { q: 'Do you provide ongoing support?', a: 'Yes. Monitoring, updates, and retraining included in support plans starting at custom monthly rates.' },
+    {
+      q: 'What can WhatsApp automation do for my business?',
+      a: 'WhatsApp automation can handle customer support, lead qualification, appointment booking, order updates, follow-ups, FAQs, and personalized messaging—helping you save time and respond instantly.'
+    },
+    {
+      q: 'Can the chatbot integrate with my existing CRM or business software?',
+      a: 'Yes. We can integrate WhatsApp with CRMs, Google Sheets, payment gateways, booking systems, ERPs, and custom APIs to automate your business workflows.'
+    },
+    {
+      q: 'Will customers know they are talking to an AI?',
+      a: 'Our AI assistant provides natural, human-like conversations and can seamlessly transfer complex queries to your team whenever human assistance is needed.'
+    },
+    {
+      q: 'Is WhatsApp automation suitable for small businesses?',
+      a: 'Absolutely. Whether you are a startup, clinic, real estate agency, educational institute, or e-commerce business, WhatsApp automation helps improve customer engagement while reducing manual work.'
+    },
+    {
+      q: 'How long does it take to set up?',
+      a: 'Most WhatsApp automation solutions can be designed, integrated, and deployed within 1–3 weeks, depending on your business requirements and integrations.'
+    },
+    {
+      q: 'Is customer data secure?',
+      a: 'Yes. We follow secure development practices and ensure customer data is handled safely. Integrations are built using secure APIs and industry-standard authentication methods.'
+    },
+    {
+      q: 'Do you provide support after deployment?',
+      a: 'Yes. We provide ongoing maintenance, monitoring, updates, performance optimization, and technical support to ensure your WhatsApp automation continues to run smoothly.'
+    }
   ];
 
   return (
@@ -67,15 +101,14 @@ const AISolutions = () => {
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6 leading-tight">
-              Automate the work your team hates.<br />
-              <span className="block text-4xl sm:text-5xl mt-2 font-normal text-gray-700">We build AI systems that actually work.</span>
+            <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6 leading-none">
+              Automate Your Business with AI-Powered WhatsApp<br />
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              From chatbots to process automation. Custom AI that integrates with your existing infrastructure — no rip-and-replace required.
+              Convert more leads, support customers 24/7, and automate repetitive conversations with intelligent WhatsApp solutions.
             </p>
             <Link href="/contact" className="inline-flex items-center px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <span>Free AI Readiness Assessment</span>
+              <span>Book Free WhatsApp Automation Demo</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
@@ -130,7 +163,7 @@ const AISolutions = () => {
               </div>
             ))}
           </div>
-          <p className="text-center text-gray-500 font-medium mt-6">Timeline: 4-8 weeks average. Results visible in 2 weeks.</p>
+        
         </div>
       </section>
 
@@ -140,16 +173,16 @@ const AISolutions = () => {
           <h2 className="text-3xl font-bold theme-text-secondary mb-10">Real Results</h2>
           <div className="grid gap-6 sm:grid-cols-3">
             <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
-              <h3 className="text-4xl font-bold text-emerald-600 mb-2">300%</h3>
-              <p className="text-gray-700 font-medium">Efficiency gain for a logistics client in 8 weeks</p>
-            </div>
-            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
-              <h3 className="text-4xl font-bold text-emerald-600 mb-2">95%</h3>
-              <p className="text-gray-700 font-medium">Reduction in manual data entry for finance team</p>
+              <h3 className="text-4xl font-bold text-emerald-600 mb-2">90%</h3>
+              <p className="text-gray-700 font-medium">Faster Customer Response Time</p>
             </div>
             <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
               <h3 className="text-4xl font-bold text-emerald-600 mb-2">70%</h3>
-              <p className="text-gray-700 font-medium">Inquiries handled automatically by support bots with 92% CSAT</p>
+              <p className="text-gray-700 font-medium">Reduction in Repetitive Customer Queries</p>
+            </div>
+            <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
+              <h3 className="text-4xl font-bold text-emerald-600 mb-2">24/7</h3>
+              <p className="text-gray-700 font-medium">Automated Customer Support Availability</p>
             </div>
           </div>
         </div>
@@ -163,24 +196,23 @@ const AISolutions = () => {
           <h2 className="text-3xl font-bold theme-text-secondary mb-10 text-center">Case Studies</h2>
           <div className="grid sm:grid-cols-2 gap-8">
             <div className="theme-card p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Aetheris ERP AI - Enterprise Automation Platform</h3>
+              <h3 className="text-xl font-bold mb-4">Real Estate Lead Automation</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge: </strong>Businesses struggled with disconnected operations, manual workflows, and scattered information systems.</p>
-                <p><strong className="text-gray-900">Solution: </strong>Designed an AI-powered ERP ecosystem integrating workflow automation, intelligent search, document processing, and conversational AI..</p>
-                <p><strong className="text-gray-900">Result: </strong>Enabled centralized business operations and faster access to organizational knowledge</p>
-                <p><strong className="text-gray-900">Tech: </strong> Next.js, FastAPI, LangChain, GenAI, Redis, Celery.</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Agents were missing leads after business hours.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Built an AI-powered WhatsApp chatbot that qualified buyers, answered FAQs, and booked property visits.</p>
+                <p><strong className="text-gray-900">Result: </strong>Reduced response time from hours to seconds while increasing qualified appointments.</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
             <div className="theme-card p-8 rounded-2xl border theme-border-secondary shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Lead Magnet AI - Intelligent Lead Research Platform</h3>
+              <h3 className="text-xl font-bold mb-4">Clinic Appointment Automation</h3>
               <div className="space-y-3 text-sm mb-6">
-                <p><strong className="text-gray-900">Challenge: </strong>Sales teams spent significant time researching prospects and preparing outreach data.</p>
-                <p><strong className="text-gray-900">Solution: </strong>Developed an AI-powered lead generation engine capable of company research, data enrichment, and automated report creation.</p>
-                <p><strong className="text-gray-900">Result: </strong>Streamlined prospect analysis and reduced manual lead qualification efforts</p>
-                <p><strong className="text-gray-900">Tech: </strong>React, FastAPI, LangChain, GenAI, Razorpay</p>
+                <p><strong className="text-gray-900">Challenge: </strong>Receptionists handled hundreds of repetitive calls daily.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Implemented WhatsApp automation for appointment booking, reminders, and FAQs.
+                </p>
+                <p><strong className="text-gray-900">Result: </strong>Reduced manual workload and improved patient response time significantly.</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
                 Read Full Case Study <ArrowRight className="w-4 h-4 ml-1" />
@@ -191,7 +223,7 @@ const AISolutions = () => {
       </section>
 
       {/* FAQ */}
-    
+
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold theme-text-secondary mb-4 text-center">FAQ's</h2>
@@ -220,8 +252,8 @@ const AISolutions = () => {
       {/* CTA Banner */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center theme-bg-secondary p-12 rounded-3xl text-white shadow-2xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to automate?</h2>
-          <p className="text-lg text-emerald-100 mb-8">Get a Free AI Readiness Assessment</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Automate Your WhatsApp Business?</h2>
+          <p className="text-lg text-emerald-100 mb-8">Book a Free WhatsApp Automation Consultation</p>
           <Link href="/contact" className="inline-block px-8 py-4 bg-white text-emerald-700 rounded-3xl font-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
             Book 30-Min Call
           </Link>

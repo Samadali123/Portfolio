@@ -153,29 +153,6 @@ const SoftwareDevelopment = () => {
         </div>
       </section>
 
-      {/* Pricing Signal */}
-      <section className="px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold theme-text-secondary mb-10">Project Pricing & Timeline</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="theme-card p-6 rounded-2xl border theme-border-secondary">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">MVP</h3>
-              <p className="text-emerald-600 font-bold text-xl mb-2">15K - 25K</p>
-              <p className="text-gray-500">4-8 weeks</p>
-            </div>
-            <div className="theme-card p-6 rounded-2xl border theme-border-secondary bg-emerald-50/50">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Mid-Scale</h3>
-              <p className="text-emerald-600 font-bold text-xl mb-2">50K - 100K</p>
-              <p className="text-gray-500">8-16 weeks</p>
-            </div>
-            <div className="theme-card p-6 rounded-2xl border theme-border-secondary">
-              <h3 className="text-lg font-bold mb-2 text-gray-900">Enterprise</h3>
-              <p className="text-emerald-600 font-bold text-xl mb-2">Custom</p>
-              <p className="text-gray-500">16+ weeks</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ */}
   
