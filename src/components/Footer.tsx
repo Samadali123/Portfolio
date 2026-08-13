@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
-import footerLogo from '../assets/images/footer_logo.png';
+import footerLogo from '../assets/images/logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,12 +46,11 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           <div className="space-y-5 text-center sm:text-left">
-            <Link href="/" className="inline-flex items-center space-x-2 group">
-              <div className="flex items-center space-x-2">
-                <img src={footerLogo.src} alt="ASG Solutions" className="w-20 h-20" />
-              </div>
+            <Link href="/" className="inline-flex flex-col items-center sm:items-start space-y-1 group">
+              <img src={footerLogo.src} alt="ASG Solutions" className="w-20 h-auto" />
+              <span className="text-white font-medium text-lg">Advanced Systems & Gen AI</span>
             </Link>
-            <p className="mx-auto sm:mx-0 text-sm leading-relaxed text-gray-400 max-w-xs">
+            <p className="mx-auto sm:mx-0 text-sm leading-relaxed text-gray-400 max-w-xs sm:max-w-md">
               Empowering businesses with smart cloud and AI solutions for the digital age. Leading the way in scalable enterprise technology.
             </p>
             <div className="flex justify-center sm:justify-start space-x-4">

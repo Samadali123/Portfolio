@@ -15,7 +15,6 @@ import {
   SiMysql,
   SiPostgresql,
   SiRedis,
-  SiOpenai,
   SiLangchain,
   SiApacheairflow,
   SiRedux,
@@ -170,7 +169,7 @@ const Home = () => {
     ],
 
     ai: [
-      { name: 'GenAI', icon: SiOpenai },
+      { name: 'GenAI', icon: Brain },
       { name: 'LangChain', icon: SiLangchain },
       { name: 'RAG Systems', icon: SiLangchain },
       { name: 'n8n', icon: SiN8N },

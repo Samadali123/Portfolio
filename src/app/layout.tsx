@@ -12,10 +12,10 @@ export const metadata: Metadata = {
   applicationName: 'ASG Solutions',
   icons: {
     icon: [
-      { url: '/favicon.png', type: 'image/png' },
+      { url: '../assets/images/faviconlogo.png', type: 'image/png' },
     ],
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    shortcut: '../assets/images/faviconlogo.png',
+    apple: '../assets/images/faviconlogo.png',
   },
   openGraph: {
     title: 'ASG Solutions | Smart Cloud, AI & Software Solutions',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/favicon.png',
+        url: '../assets/images/faviconlogo.png',
         alt: 'ASG Solutions logo',
       },
     ],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary',
     title: 'ASG Solutions | Smart Cloud, AI & Software Solutions',
     description: 'Smart cloud, AI, and software solutions for growing businesses.',
-    images: ['/favicon.png'],
+    images: ['../assets/images/faviconlogo.png'],
   },
 };
 

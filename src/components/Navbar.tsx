@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
+import navLogo from '../assets/images/navlogo.png';
 
 
 const Navbar = () => {
@@ -60,7 +61,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <span className="text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-gray-900 leading-4.5">ASG <br /> Solutions</span>
+            {/* <span className="text-xl font-bold text-gray-800 transition-colors duration-300 group-hover:text-gray-900 leading-4.5">ASG <br /> Solutions</span>  */}
+            <img src={navLogo.src} alt="ASG Solutions Logo" className="w-25" />
           </Link>
 
           {/* Desktop Navigation */}
