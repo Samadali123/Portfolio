@@ -83,14 +83,10 @@ const About = () => {
           >
 
             <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6">
-              Innovating the Future of
-              <span className="block bg-clip-text">
-                Business Technology
-              </span>
+              We help businesses save time and cut costs with practical AI Solutions
             </h1>
-            <p className="max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
-              At ASG Solutions, we're committed to empowering businesses with cutting-edge technology
-              solutions that drive growth, efficiency, and innovation in the digital age.
+            <p className="hidden sm:block max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
+              ASG builds focused automation, AI agents, and custom software that remove repetitive work, reduce errors, and deliver measurable savings not theoretical prototypes.
             </p>
           </motion.div>
         </div>

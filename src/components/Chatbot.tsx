@@ -110,8 +110,6 @@ const Chatbot = () => {
   }, [isOpen]);
 
   const quickActions = [
-    { label: 'WhatsApp Automation Pricing', icon: IndianRupee },
-    { label: 'See a Live Demo', icon: PlayCircle },
     { label: 'Book Appointment', icon: Calendar },
     { label: 'Reschedule Meeting', icon: Clock },
     { label: 'Our Services', icon: MessageCircle },

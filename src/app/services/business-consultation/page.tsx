@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
-import Cloud from '@/views/services/Cloud';
+import BusinessConsultation from '@/views/services/BusinessConsultation';
 
 export const metadata: Metadata = {
   title: 'Business Consultation',
-  description: 'Strategic guidance for cloud solutions, system design, and digital transformation.',
+  description: 'AI-first business consultation focused on high-ROI automation, cost reduction and scalable processes.',
 };
 
 export default function Page() {
-  return <Cloud />;
+  return <BusinessConsultation />;
 }

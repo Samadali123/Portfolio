@@ -12,28 +12,28 @@ const AISolutions = () => {
   const services = [
     {
       icon: Bot,
-      title: 'AI WhatsApp Chatbots',
-      description: 'Answer customer questions instantly using AI-powered conversations.',
+      title: 'AI Chatbots & Conversational Agents',
+      description: 'Stop losing leads and slow responses — qualify visitors automatically and hand off only sales-ready prospects to your team.',
     },
     {
       icon: Cpu,
-      title: 'Lead Qualification',
-      description: 'Automatically capture, qualify, and assign leads to your sales team.',
+      title: 'AI Agents & Workflows',
+      description: 'Turn repetitive work into automated workflows that update systems, raise invoices, and close tasks without human hours.',
     },
     {
       icon: FileText,
-      title: 'Appointment Booking',
-      description: 'Schedule meetings, consultations, and reminders directly through WhatsApp.',
+      title: 'Scheduling & Reminders',
+      description: 'Automatically book appointments, reduce no-shows, and recover lost revenue with timely reminders and confirmations.',
     },
     {
       icon: BarChart,
-      title: 'Order & Customer Support',
-      description: 'Provide order updates, FAQs, complaint handling, and post-sale support.',
+      title: 'Support & Order Automation',
+      description: 'Deflect repetitive tickets, speed order updates, and reduce support headcount by automating common cases.',
     },
     {
       icon: LinkIcon,
-      title: 'CRM & Business Integrations',
-      description: 'Connect WhatsApp with CRMs, Google Sheets, payment gateways, and business applications.',
+      title: 'Integrations & Data Sync',
+      description: 'Connect AI to your CRM, billing, and analytics so automation acts on live data and delivers measurable business outcomes.',
     },
   ];
 
@@ -58,30 +58,30 @@ const AISolutions = () => {
 
   const process = [
     { step: '1', title: 'Understand Your Business', desc: 'Understand your customer journey and identify repetitive conversations.' },
-    { step: '2', title: 'Build Your WhatsApp Automation', desc: 'Design AI-powered WhatsApp workflows integrated with your existing tools.' },
+    { step: '2', title: 'Build Your AI Automation', desc: 'Design AI-powered chatbots and agents integrated with your existing tools.' },
     { step: '3', title: 'Launch & Optimize', desc: 'Deploy, monitor, optimize, and continuously improve automation performance.' },
   ];
 
   const faqs = [
     {
-      q: 'What can WhatsApp automation do for my business?',
-      a: 'WhatsApp automation can handle customer support, lead qualification, appointment booking, order updates, follow-ups, FAQs, and personalized messaging—helping you save time and respond instantly.'
+      q: 'What can AI automation do for my business?',
+      a: 'AI automation can handle customer support, lead qualification, appointment booking, order updates, follow-ups, FAQs, and personalized messaging—helping you save time and respond instantly.'
     },
     {
       q: 'Can the chatbot integrate with my existing CRM or business software?',
-      a: 'Yes. We can integrate WhatsApp with CRMs, Google Sheets, payment gateways, booking systems, ERPs, and custom APIs to automate your business workflows.'
+      a: 'Yes. We integrate AI automation with CRMs, Google Sheets, payment gateways, booking systems, ERPs, and custom APIs to automate your business workflows.'
     },
     {
       q: 'Will customers know they are talking to an AI?',
       a: 'Our AI assistant provides natural, human-like conversations and can seamlessly transfer complex queries to your team whenever human assistance is needed.'
     },
     {
-      q: 'Is WhatsApp automation suitable for small businesses?',
-      a: 'Absolutely. Whether you are a startup, clinic, real estate agency, educational institute, or e-commerce business, WhatsApp automation helps improve customer engagement while reducing manual work.'
+      q: 'Is AI automation suitable for small businesses?',
+      a: 'Absolutely. Whether you are a startup, clinic, real estate agency, educational institute, or e-commerce business, AI automation improves customer engagement while reducing manual work.'
     },
     {
       q: 'How long does it take to set up?',
-      a: 'Most WhatsApp automation solutions can be designed, integrated, and deployed within 1–3 weeks, depending on your business requirements and integrations.'
+      a: 'Most AI automation solutions can be designed, integrated, and deployed within 1–3 weeks, depending on your business requirements and integrations.'
     },
     {
       q: 'Is customer data secure?',
@@ -89,7 +89,7 @@ const AISolutions = () => {
     },
     {
       q: 'Do you provide support after deployment?',
-      a: 'Yes. We provide ongoing maintenance, monitoring, updates, performance optimization, and technical support to ensure your WhatsApp automation continues to run smoothly.'
+      a: 'Yes. We provide ongoing maintenance, monitoring, updates, performance optimization, and technical support to ensure your AI automation continues to run smoothly.'
     }
   ];
 
@@ -102,13 +102,13 @@ const AISolutions = () => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6 leading-none">
-              Automate Your Business with AI-Powered WhatsApp<br />
+              AI Chatbots, Agents & Automation That Save Time
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Convert more leads, support customers 24/7, and automate repetitive conversations with intelligent WhatsApp solutions.
+              Build AI chatbots and autonomous agents that qualify leads, resolve common requests, and act on your data to create measurable impact.
             </p>
             <Link href="/contact" className="inline-flex items-center px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <span>Book Free WhatsApp Automation Demo</span>
+              <span>Free 15‑Min AI Audit</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
@@ -124,7 +124,7 @@ const AISolutions = () => {
               <div key={i} className="theme-card rounded-2xl p-6 shadow-lg border theme-border-secondary">
                 <s.icon className="w-10 h-10 theme-text-secondary mb-4" />
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                <p className="text-gray-600">{s.description}</p>
+                <p className="text-gray-700">{s.description}</p>
               </div>
             ))}
           </div>
@@ -173,16 +173,16 @@ const AISolutions = () => {
           <h2 className="text-3xl font-bold theme-text-secondary mb-10">Real Results</h2>
           <div className="grid gap-6 sm:grid-cols-3">
             <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
-              <h3 className="text-4xl font-bold text-emerald-600 mb-2">90%</h3>
-              <p className="text-gray-700 font-medium">Faster Customer Response Time</p>
+              <h3 className="text-4xl font-bold text-emerald-600 mb-2">40%+</h3>
+              <p className="text-gray-700 font-medium">Reduction in manual follow-ups</p>
             </div>
             <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
-              <h3 className="text-4xl font-bold text-emerald-600 mb-2">70%</h3>
-              <p className="text-gray-700 font-medium">Reduction in Repetitive Customer Queries</p>
+              <h3 className="text-4xl font-bold text-emerald-600 mb-2">60%+</h3>
+              <p className="text-gray-700 font-medium">Deflection of repetitive tickets</p>
             </div>
             <div className="p-6 rounded-2xl shadow-md border theme-border-secondary">
-              <h3 className="text-4xl font-bold text-emerald-600 mb-2">24/7</h3>
-              <p className="text-gray-700 font-medium">Automated Customer Support Availability</p>
+              <h3 className="text-4xl font-bold text-emerald-600 mb-2"><span>24/7</span></h3>
+              <p className="text-gray-700 font-medium">Always-on customer support</p>
             </div>
           </div>
         </div>
@@ -199,7 +199,7 @@ const AISolutions = () => {
               <h3 className="text-xl font-bold mb-4">Real Estate Lead Automation</h3>
               <div className="space-y-3 text-sm mb-6">
                 <p><strong className="text-gray-900">Challenge: </strong>Agents were missing leads after business hours.</p>
-                <p><strong className="text-gray-900">Solution: </strong>Built an AI-powered WhatsApp chatbot that qualified buyers, answered FAQs, and booked property visits.</p>
+                <p><strong className="text-gray-900">Solution: </strong>Built an AI-powered conversational agent that qualified buyers, answered FAQs, and booked property visits.</p>
                 <p><strong className="text-gray-900">Result: </strong>Reduced response time from hours to seconds while increasing qualified appointments.</p>
               </div>
               <Link href="/portfolio" className="text-emerald-600 font-semibold hover:underline flex items-center">
@@ -210,7 +210,7 @@ const AISolutions = () => {
               <h3 className="text-xl font-bold mb-4">Clinic Appointment Automation</h3>
               <div className="space-y-3 text-sm mb-6">
                 <p><strong className="text-gray-900">Challenge: </strong>Receptionists handled hundreds of repetitive calls daily.</p>
-                <p><strong className="text-gray-900">Solution: </strong>Implemented WhatsApp automation for appointment booking, reminders, and FAQs.
+                <p><strong className="text-gray-900">Solution: </strong>Implemented AI automation for appointment booking, reminders, and FAQs.
                 </p>
                 <p><strong className="text-gray-900">Result: </strong>Reduced manual workload and improved patient response time significantly.</p>
               </div>
@@ -252,10 +252,10 @@ const AISolutions = () => {
       {/* CTA Banner */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center theme-bg-secondary p-12 rounded-3xl text-white shadow-2xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Automate Your WhatsApp Business?</h2>
-          <p className="text-lg text-emerald-100 mb-8">Book a Free WhatsApp Automation Consultation</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Automate Customer Experience with AI?</h2>
+            <p className="text-lg text-emerald-100 mb-8">Free 15‑Min AI Audit</p>
           <Link href="/contact" className="inline-block px-8 py-4 bg-white text-emerald-700 rounded-3xl font-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-            Book 30-Min Call
+            Book Free Audit
           </Link>
         </div>
       </section>

@@ -10,28 +10,28 @@ const PrivacyPolicy = () => {
     const sections = [
         {
             icon: Eye,
-            title: "1. Information We Collect",
-            content: "We collect information that you provide directly to us, including name, email address, company details, and any project-related information when you use our contact forms or book an appointment. We also automatically collect technical data like IP addresses and browser types to improve our service delivery."
+            title: "1. What We Collect",
+            content: "Your name, email, company details, and project information when you contact us. We also collect technical data (IP, browser) to operate and improve the site.",
         },
         {
             icon: Shield,
-            title: "2. How We Use Your Information",
-            content: "Your data is used to provide, maintain, and improve our services, including cloud management, AI automation, and web development. We process your information to communicate with you about projects, provide customer support, and send technical notices or security alerts."
+            title: "2. How We Use It",
+            content: "To reply to inquiries, run audits, deliver services, and send essential updates. We do not use your data for unrelated profiling without consent.",
         },
         {
             icon: Lock,
-            title: "3. Data Security",
-            content: "ASG Solutions implements industry-standard security measures to protect your personal information. This includes end-to-end encryption for data in transit and strict access controls for our internal infrastructure. However, no method of transmission over the Internet is 100% secure."
+            title: "3. Security",
+            content: "We protect data with industry-standard controls and limit access to only those who need it. No system is perfect, but we follow best practices.",
         },
         {
             icon: Globe,
-            title: "4. Information Sharing",
-            content: "We do not sell or rent your personal data to third parties. We may share information with trusted service providers who assist us in operating our platform, provided those parties agree to keep this information confidential and comply with data protection regulations."
+            title: "4. Sharing",
+            content: "We don’t sell your data. We may share with trusted vendors who help deliver services under contract and confidentiality obligations.",
         },
         {
-            icon: Bell,
-            title: "5. Your Rights",
-            content: "Depending on your location, you may have the right to access, correct, or delete your personal data. You can opt-out of marketing communications at any time. To exercise these rights, please contact our data protection team at contact@asgsolutions.dev"
+                    icon: Bell,
+                    title: "5. Your Rights",
+                    content: "You can request access, correction, or deletion of your data and opt out of marketing. Contact contact@asgsolutions.dev to make a request.",
         }
     ];
 

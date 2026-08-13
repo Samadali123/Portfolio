@@ -25,7 +25,7 @@ const Careers = () => {
       department: "Engineering",
       location: "Remote",
       type: "Full-time",
-      salary: "$120K - $150K",
+      salary: "Competitive",
       description: "Build stunning user interfaces with React and TypeScript",
       icon: Code,
       required: ["React", "TypeScript", "Tailwind CSS", "5+ years experience"],
@@ -34,21 +34,21 @@ const Careers = () => {
       id: 2,
       title: "AI/ML Engineer",
       department: "AI & Data",
-      location: "San Francisco, CA",
+      location: "Remote",
       type: "Full-time",
-      salary: "$140K - $180K",
-      description: "Develop cutting-edge AI solutions and machine learning models",
+      salary: "Competitive",
+      description: "Develop practical AI solutions that deliver business value",
       icon: Lightbulb,
-      required: ["Python", "TensorFlow/PyTorch", "ML Algorithms", "4+ years experience"],
+      required: ["Python", "TensorFlow/PyTorch", "ML Algorithms", "3+ years experience"],
     },
     {
       id: 3,
       title: "Full Stack Developer",
       department: "Engineering",
-      location: "New York, NY",
+      location: "Remote",
       type: "Full-time",
-      salary: "$100K - $130K",
-      description: "Create scalable web applications from frontend to backend",
+      salary: "Competitive",
+      description: "Build reliable, scalable web applications and integrations",
       icon: Globe,
       required: ["Node.js", "React", "Databases", "3+ years experience"],
     },
@@ -58,10 +58,10 @@ const Careers = () => {
       department: "Infrastructure",
       location: "Remote",
       type: "Full-time",
-      salary: "$110K - $145K",
+      salary: "Competitive",
       description: "Manage cloud infrastructure and deployment pipelines",
       icon: Zap,
-      required: ["Docker", "Kubernetes", "AWS/GCP", "4+ years experience"],
+      required: ["Docker", "Kubernetes", "AWS/GCP", "3+ years experience"],
     },
     {
       id: 5,
@@ -69,8 +69,8 @@ const Careers = () => {
       department: "AI & Data",
       location: "Remote",
       type: "Full-time",
-      salary: "$130K - $160K",
-      description: "Transform data into actionable insights and solutions",
+      salary: "Competitive",
+      description: "Turn data into decisions that move the business forward",
       icon: TrendingUp,
       required: ["Python", "SQL", "Statistics", "3+ years experience"],
     },
@@ -78,12 +78,12 @@ const Careers = () => {
       id: 6,
       title: "Product Manager",
       department: "Product",
-      location: "Austin, TX",
+      location: "Remote",
       type: "Full-time",
-      salary: "$115K - $155K",
-      description: "Lead product strategy and drive innovation",
+      salary: "Competitive",
+      description: "Prioritize and deliver product features that create measurable business impact",
       icon: Target,
-      required: ["Product Strategy", "Analytics", "Leadership", "5+ years experience"],
+      required: ["Product Strategy", "Analytics", "Leadership", "4+ years experience"],
     },
   ];
 
@@ -179,12 +179,10 @@ const Careers = () => {
           className="text-center"
         >
           <h1 className="text-4xl md:text-5xl font-bold theme-text-secondary mb-6">
-            Careers at ASG Solutions
+            Build real AI products that make work easier
           </h1>
           <p className="text-lg md:text-xl theme-text-muted mb-8 max-w-2xl mx-auto">
-            Join ASG Solutions and be part of a team transforming industries with innovative AI,
-            cloud, and data solutions. We''re looking for talented individuals who are passionate about
-            technology and making an impact.
+            Join a compact, high-impact team shipping automation and AI features that reduce repetitive work and deliver measurable value for customers.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -278,7 +276,7 @@ const Careers = () => {
             Don''t See Your Role? We''re Always Hiring!
           </h2>
           <p className="text-lg mb-8 opacity-90">
-            Send us your resume and tell us what you''d like to build with us.
+            Send your resume and a short note about the problems you want to solve we look for makers who love impact over buzzwords.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}

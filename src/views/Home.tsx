@@ -42,31 +42,31 @@ const Home = () => {
   const services = [
     {
       icon: Brain,
-      title: 'WhatsApp Automation',
-      description: 'Automate customer support, lead capture, follow-ups, appointment reminders, and order updates with intelligent WhatsApp workflows that integrate seamlessly with your existing business tools.',
+      title: 'AI Automation',
+      description: 'Custom chatbots, AI agents, and workflow automation that qualify leads, resolve support queries, and take action on your data.',
       path: '/services/ai-solutions',
       gradient: 'from-purple-500 to-pink-400',
     },
     {
+      icon: Cloud,
+      title: 'Business Consultation',
+      description: 'Strategy-first AI and process improvements that prioritise high-ROI automation and measurable cost savings.',
+      path: '/services/business-consultation',
+      gradient: 'from-blue-500 to-cyan-400',
+    },
+    {
       icon: Code,
-      title: 'Software Development',
-      description: 'SaaS platforms, internal tools, and client portals that scale delivered in weeks, not months.',
+      title: 'Custom Software Development',
+      description: 'SaaS platforms, internal tools, and client portals that scale built to automate work and accelerate revenue.',
       path: '/services/software-development',
       gradient: 'from-green-500 to-emerald-400',
     },
     {
       icon: BarChart3,
       title: 'Data Driven Solutions',
-      description: 'Turn raw data into decisions. Real-time dashboards, automated pipelines, and predictive analytics that drive revenue.',
+      description: 'Turn raw data into decisions: automated pipelines, dashboards, and predictive models that increase ROI.',
       path: '/services/data-driven-solutions',
       gradient: 'from-orange-500 to-yellow-400',
-    },
-    {
-      icon: Cloud,
-      title: 'Business Consultation',
-      description: 'Scale without the headaches. AWS/Azure/GCP expertise. Migrations, cost optimization, 99.9% uptime SLA.',
-      path: '/services/business-consultation',
-      gradient: 'from-blue-500 to-cyan-400',
     },
   ];
 
@@ -77,24 +77,21 @@ const Home = () => {
       name: 'Raj Kumar',
       role: 'Business Owner',
       image: 'https://ui-avatars.com/api/?name=Raj+Kumar&background=0D8ABC&color=fff',
-      content:
-        'The WhatsApp automation setup was straightforward and saved our team a lot of manual follow-up work. Customer response times improved almost immediately.',
+      content: 'Saved ~40% time on manual follow-ups and doubled qualified leads in 6 weeks.',
       rating: 5,
     },
     {
       name: 'Priya Sharma',
       role: 'Operations Manager',
       image: 'https://ui-avatars.com/api/?name=Priya+Sharma&background=FF8A65&color=fff',
-      content:
-        'What impressed us most was how quickly the workflows were customized for our process. The automation handled repetitive queries while our team focused on higher-value tasks.',
+      content: 'Automation removed routine support tasks — response time went from hours to seconds.',
       rating: 4,
     },
     {
       name: 'Vikram Singh',
       role: 'Founder',
       image: 'https://ui-avatars.com/api/?name=Vikram+Singh&background=4CAF50&color=fff',
-      content:
-        'We needed a combination of website improvements and business automation. The solution was practical, easy to use, and helped streamline our day-to-day operations.',
+      content: 'Practical, measurable improvements: fewer errors, faster onboarding, and happier customers.',
       rating: 4,
     },
   ];
@@ -107,25 +104,25 @@ const Home = () => {
       icon: Settings,
       title: 'One Partner for Everything',
       description:
-        'Whether you need WhatsApp automation, AI solutions, custom websites, dashboards, or data-driven applications—we build it all under one roof.',
+        'One partner for bots, integrations, and custom software so you avoid vendor friction and get results faster.',
     },
     {
       icon: Zap,
       title: 'Automation That Saves Time',
       description:
-        'Automate customer support, lead generation, follow-ups, internal workflows, and repetitive business tasks to boost productivity.',
+        'Remove repetitive tasks and free your team — expect measurable time savings in weeks, not months.',
     },
     {
       icon: Shield,
       title: 'Built for Scale & Security',
       description:
-        'Every solution is designed with secure integrations, clean architecture, and scalability to support your business as it grows.',
+        'Secure integrations and scalable design so automation grows with your business without breaking processes.',
     },
     {
       icon: CheckCircle,
       title: 'Long-Term Technology Partner',
       description:
-        'Beyond launch, we provide maintenance, feature enhancements, performance monitoring, and dedicated technical support.',
+        'We stay on with you: maintenance, performance checks, and incremental improvements to secure long-term value.',
     },
   ];
 
@@ -216,9 +213,9 @@ const Home = () => {
           >
             {/* Impactful Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold theme-text-secondary leading-none tracking-tight max-w-4xl mx-auto">
-              Never Miss a Customer Message Again
-              <p className="block mt-7 bg-gradient-to-r from-emerald-700 via-emerald-800 to-green-900 bg-clip-text text-transparent text-xl sm:text-3xl lg:text-2xl font-semibold">
-                WhatsApp Automation for Growing Businesses
+              Cut Costs & Save Time with AI Automation
+              <p className="block mt-5 text-xl sm:text-2xl lg:text-2xl font-semibold text-gray-700">
+                Custom chatbots, intelligent agents, and tailored software that automate tasks and free your team.
               </p>
             </h1>
 
@@ -228,7 +225,7 @@ const Home = () => {
                 href="/contact"
                 className="px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl theme-shadow-secondary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 flex items-center justify-center space-x-2 group w-full sm:w-auto"
               >
-                <span>Book a Free 15-Min WhatsApp Demo</span>
+                <span>Free 15‑Min AI Audit</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -237,13 +234,6 @@ const Home = () => {
               >
                 <span>See Our Work</span>
               </Link>
-            </div>
-
-            {/* Psychological Trust Markers */}
-            <div className="flex items-center justify-center flex-wrap gap-x-6 gap-y-2 text-xs font-medium text-gray-500 pt-1">
-              <span className="flex items-center gap-1">✓  Live in 5 Days</span>
-              <span className="flex items-center gap-1">✓  70% Fewer Manual Replies</span>
-              <span className="flex items-center gap-1">✓  No-Code, Easy to Edit</span>
             </div>
           </motion.div>
         </div>
@@ -256,30 +246,28 @@ const Home = () => {
             {/* First Set of Items */}
 
 
-            <span className="flex items-center gap-2 whitespace-nowrap">Whatsapp Business Automation</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Email Marketing Automation</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Lead Generation / CRM </span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Custom SaaS Platforms</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">System Automation</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Intelligent AI Agents</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Cloud Infrastructure</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">99.9% Uptime SLA</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">MVP in 4 Weeks</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Real-time Data Pipelines</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">AI Chatbots & RAG</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Save 30% on manual work</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">MVP in 4 weeks</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Free 15‑Min AI Audit</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Automate lead qualification</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Reduce support tickets by 60%</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Intelligent agents that act</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Connect CRM & payments</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Secure by design</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Real-time dashboards</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Outcome-focused pilots</span>
 
             {/* Second Set of Items (Clone for continuous loop) */}
-            <span className="flex items-center gap-2 whitespace-nowrap">Whatsapp Business Automation</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Email Marketing Automation</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Lead Generation / CRM </span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Custom SaaS Platforms</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">System Automation</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Intelligent AI Agents</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Cloud Infrastructure</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">99.9% Uptime SLA</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">MVP in 4 Weeks</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">Real-time Data Pipelines</span>
-            <span className="flex items-center gap-2 whitespace-nowrap">AI Chatbots & RAG</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Save 30% on manual work</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">MVP in 4 weeks</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Free 15‑Min AI Audit</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Automate lead qualification</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Reduce support tickets by 60%</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Intelligent agents that act</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Connect CRM & payments</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Secure by design</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Real-time dashboards</span>
+            <span className="flex items-center gap-2 whitespace-nowrap">Outcome-focused pilots</span>
           </div>
         </div>
       </div>

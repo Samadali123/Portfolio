@@ -16,10 +16,10 @@ const Footer = () => {
       { name: 'Contact', path: '/contact' },
     ],
     services: [
-      { name: 'Software Development', path: '/services/software-development' },
-      { name: 'AI Solutions', path: '/services/ai-solutions' },
-      { name: 'Data Driven Solutions', path: '/services/data-driven-solutions' },
+      { name: 'AI Automation', path: '/services/ai-solutions' },
       { name: 'Business Consultation', path: '/services/business-consultation' },
+      { name: 'Custom Software Development', path: '/services/software-development' },
+      { name: 'Data Driven Solutions', path: '/services/data-driven-solutions' },
     ],
   };
 
@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="space-y-5 text-center sm:text-left">
             <Link href="/" className="inline-flex flex-col items-center sm:items-start space-y-1 group">
               <img src={footerLogo.src} alt="ASG Solutions" className="w-20 h-auto" />
-              <span className="text-white font-medium text-lg">Advanced Systems & Gen AI</span>
+              <span className="text-white font-medium text-lg">Advanced Systems & Gen AI Solutions</span>
             </Link>
             <p className="mx-auto sm:mx-0 text-sm leading-relaxed text-gray-400 max-w-xs sm:max-w-md">
               Empowering businesses with smart cloud and AI solutions for the digital age. Leading the way in scalable enterprise technology.
@@ -148,6 +148,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-12 md:mt-16 pt-8 w-full flex flex-col gap-5">
+          
           <p className="text-gray-500 text-center text-sm">
             &copy; {currentYear} <span className="text-emerald-500 font-semibold">ASG Solutions</span>. All rights reserved.
           </p>

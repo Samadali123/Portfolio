@@ -7,82 +7,68 @@ const Services = () => {
 
   // Services data
   const services = [
-    {
-      icon: Code,
-      title: 'Software Development',
-      description: 'Custom software solutions built with cutting-edge technologies and best practices.',
-      features: [
-        'Custom Web Applications',
-        'E-commerce Solutions',
-        'Progressive Web Apps (PWA)',
-        'SaaS Platforms',
-        'Mobile Applications (iOS & Android)',
-        'API Development & Integration',
-      ],
-      impacts: [
-        'Modern, user-friendly interfaces',
-        'Mobile-first approach',
-        'SEO optimized',
-        'Scalable architecture',
-      ],
-    },
+  
     {
       icon: Brain,
-      title: 'AI Solutions',
-      description: 'Intelligent solutions powered by cutting-edge artificial intelligence technology.',
-      features: [
-        'Machine Learning Models',
-        'Process Automation (RPA)',
-        'Natural Language Processing',
-        'Computer Vision Solutions',
-        'Predictive Analytics',
-        'AI Integration & Deployment',
+      title: 'AI Automation',
+      description: 'Automations and chat-driven agents that convert leads, resolve common requests, and complete tasks so your team focuses on revenue.',
+      benefits: [
+        'Qualify leads automatically so sales teams focus on ready prospects',
+        'Deflect repetitive support to reduce ticket volume and headcount pressure',
+        'Trigger actions across systems (CRM, billing, tickets) without manual steps',
       ],
       impacts: [
-        'Increase efficiency by 300%',
-        'Reduce operational costs',
-        'Improve decision-making accuracy',
-        'Scale operations effortlessly',
-      ],
-    },
-    {
-      icon: BarChart3,
-      title: 'Data Driven Solutions',
-      description: 'Transform raw data into actionable insights with advanced analytics and engineering.',
-      features: [
-        'Business Intelligence (BI)',
-        'Data Visualization',
-        'Data Engineering',
-        'Big Data Processing',
-        'Real-time Analytics',
-        'Machine Learning Pipelines',
-      ],
-      impacts: [
-        'Data-driven decision making',
-        'Identify new opportunities',
-        'Optimize business processes',
-        'Predict market trends',
+        'Reduce manual hours by up to 50%',
+        'Increase qualified leads and shorten sales cycles',
+        'Reduce time-to-resolution and recover lost revenue',
       ],
     },
     {
       icon: Briefcase,
       title: 'Business Consultation',
-      description: 'Strategic guidance for cloud solutions, system design, and digital transformation.',
-      features: [
-        'Cloud Migration & Strategy',
-        'System Design & Architecture',
-        'Infrastructure as a Service (IaaS)',
-        'Cloud Security & Compliance',
-        'Multi-Cloud Management',
-        'Digital Transformation Strategy',
+      description: 'Focused audits and roadmaps that find low-risk, high-payback automation and process changes you can run as pilots.',
+      benefits: [
+        'Identify 1–3 quick pilots with clear ROI and low implementation cost',
+        'A one-page roadmap prioritised by time-to-value and savings',
+        'Practical pilot plans with success metrics and minimal disruption',
       ],
       impacts: [
-        'Reduced IT costs by up to 40%',
-        'Improved scalability and flexibility',
-        'Enhanced disaster recovery',
-        'Future-proof infrastructure',
+        'Faster ROI decisions with prioritized pilots',
+        'Reduced operating cost through targeted automation',
+        'Clear plan to scale successful pilots across teams',
       ],
     },
+      {
+      icon: Code,
+      title: 'Custom Software Development',
+      description: 'Build tools and products that remove manual steps, increase throughput, and unlock new revenue without adding people.',
+      benefits: [
+        'Replace manual workflows with automated, auditable processes',
+        'Improve conversion and retention through better UX and faster flows',
+        'Connect systems to eliminate repeated data entry and errors',
+      ],
+      impacts: [
+        'Faster processing times and fewer operational errors',
+        'Higher customer conversion and lifetime value',
+        'Ability to scale customers without proportional headcount increases',
+      ],
+    },
+    {
+      icon: BarChart3,
+      title: 'Data Driven Solutions',
+      description: 'Reliable pipelines and dashboards that turn messy data into decisions that save money and increase revenue.',
+      benefits: [
+        'Automated dashboards that remove manual reporting and speed decisions',
+        'Predictive signals to prioritise retention and revenue actions',
+        'Data quality improvements so analytics are trusted and actionable',
+      ],
+      impacts: [
+        'Reduce reporting time by 60%',
+        'Expose revenue opportunities faster',
+        'Improve forecast accuracy and operational efficiency',
+      ],
+    }
+    
   ];
 
   return (
@@ -100,14 +86,13 @@ const Services = () => {
           >
 
             <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6">
-              Comprehensive IT Solutions
-              <span className="block bg-clip-text">
-                for Your Business
+              Practical Tech That Saves Time & Cost
+              <span className="hidden sm:block bg-clip-text">
+                Measurable automation, integrations, and software
               </span>
             </h1>
-            <p className="max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
-              We provide end-to-end technology solutions to help businesses thrive in the digital age.
-              Our expert team delivers innovative, scalable, and secure services tailored to your unique needs.
+            <p className="hidden sm:block max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
+              We build targeted solutions chatbots, agents, and apps that remove manual work and deliver measurable ROI.
             </p>
           </motion.div>
         </div>
@@ -145,15 +130,15 @@ const Services = () => {
                   </p>
 
                   <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 group-hover:text-(--color-primary)">
-                    Key Features
+                    How this helps your business
                   </h3>
 
                   <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, i) => (
+                    {service.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start space-x-3">
                         <CheckCircle className="w-5 h-5 mt-0.5 shrink-0 transition-colors duration-300 group-hover:text-(--color-primary)" />
                         <span className="text-gray-700 transition-colors duration-300 group-hover:text-(--color-primary)">
-                          {feature}
+                          {benefit}
                         </span>
                       </li>
                     ))}

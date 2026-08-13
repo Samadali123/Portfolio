@@ -12,27 +12,27 @@ const DataSolutions = () => {
     {
       icon: BarChart3,
       title: 'BI Dashboards',
-      description: 'Tableau, Power BI, Looker. Real-time insights, no SQL needed.',
+      description: 'Turn your data into decision-ready dashboards that cut reporting time and expose revenue opportunities.',
     },
     {
       icon: Zap,
       title: 'Data Pipelines',
-      description: 'ETL/ELT automation. Extract, transform, load. Scheduled or real-time.',
+      description: 'Reliable pipelines that eliminate manual exports and deliver fresh data to teams when they need it.',
     },
     {
       icon: Database,
       title: 'Data Warehousing',
-      description: 'Centralized data hub. Snowflake, BigQuery, or on-prem solutions.',
+      description: 'Centralized, queryable data so analytics and automation run from a single source of truth.',
     },
     {
       icon: HardDrive,
       title: 'Real-time Analytics',
-      description: 'Streaming data processing. Kafka, Spark, real-time dashboards.',
+      description: 'Detect trends and anomalies as they happen so teams react faster and reduce revenue leakage.',
     },
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
-      description: 'Forecasting, anomaly detection, ML models built on your data.',
+      description: 'Forecast demand, spot churn risks, and prioritise actions that increase conversion and reduce costs.',
     },
   ];
 
@@ -61,14 +61,14 @@ const DataSolutions = () => {
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6 leading-tight">
-              Turn your raw data into decisions that drive growth
+            <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6 leading-none">
+              Stop wasting decisions on your bad data
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Real-time analytics, automated pipelines, and dashboards that your team actually uses.
+              We build reliable pipelines, clean your data, and deliver dashboards that drive faster, more profitable decisions not more spreadsheets.
             </p>
             <Link href="/contact" className="inline-flex items-center px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <span>Free Data Audit</span>
+              <span>Free 15‑Min Data Audit</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
@@ -203,10 +203,10 @@ const DataSolutions = () => {
       {/* CTA Banner */}
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center theme-bg-secondary p-12 rounded-3xl text-white shadow-2xl">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Get a Free Data Audit</h2>
-          <p className="text-lg text-emerald-100 mb-8">30-min call to review your current setup</p>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Free 15‑Min AI Audit</h2>
+          <p className="text-lg text-emerald-100 mb-8">Quick review to find data-driven savings</p>
           <Link href="/contact" className="inline-block px-8 py-4 bg-white text-emerald-700 rounded-3xl font-bold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-            Book Assessment
+            Book Free Audit
           </Link>
         </div>
       </section>

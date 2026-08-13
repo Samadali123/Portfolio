@@ -512,13 +512,13 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6">
-              Get in touch.
-              <span className="block bg-clip-text">
-                We'll respond within 24 hours.
+              Ready to find quick automation wins?
+              <span className="hidden sm:block bg-clip-text">
+                Book a short call we’ll show where you can save time and money.
               </span>
             </h1>
-            <p className="max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
-              Choose the best way to reach us below. We're ready to help you scale your business.
+            <p className="hidden sm:block max-w-3xl mx-auto text-xl text-gray-600 leading-relaxed">
+              Pick the fastest way to connect a short audit call usually uncovers immediate, low-risk savings.
             </p>
           </motion.div>
         </div>

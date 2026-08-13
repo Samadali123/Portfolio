@@ -13,27 +13,27 @@ const SoftwareDevelopment = () => {
     {
       icon: Globe,
       title: 'Web Applications',
-      description: 'React, Vue, Next.js. Fast, scalable, SEO-friendly.',
+      description: 'Replace manual processes with web apps that cut steps, reduce errors, and speed customer workflows.',
     },
     {
       icon: Smartphone,
       title: 'Mobile Apps',
-      description: 'iOS/Android native or Flutter cross-platform.',
+      description: 'Put services in your customers’ hands to increase retention, reduce support calls, and grow revenue.',
     },
     {
       icon: Briefcase,
       title: 'SaaS Platforms',
-      description: 'Multi-tenant, subscription-ready, API-first architecture.',
+      description: 'Build subscription products that scale revenue without proportional increases in operations.',
     },
     {
       icon: Wrench,
       title: 'Internal Tools',
-      description: 'Admin dashboards, data management systems, automation tools.',
+      description: 'Remove manual admin work and speed internal processes so teams deliver more with the same headcount.',
     },
     {
       icon: Plug,
       title: 'APIs & Integrations',
-      description: 'RESTful APIs, webhooks, third-party integrations.',
+      description: 'Integrations that connect systems and unlock automation — enabling end-to-end workflows and reliable data for decision-making.',
     },
   ];
 
@@ -63,14 +63,14 @@ const SoftwareDevelopment = () => {
       <section className="px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6 leading-tight">
-              Custom software that scales with your business
+            <h1 className="text-5xl sm:text-6xl font-bold theme-text-secondary mb-6 leading-none">
+              Custom software that removes manual work and pays for itself.
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed mb-8">
-              Web apps, mobile platforms, SaaS solutions, internal tools. Full code ownership. No vendor lock-in.
+              We design and ship web and mobile apps that automate core processes, connect your systems, and deliver measurable ROI fast.
             </p>
             <Link href="/contact" className="inline-flex items-center px-8 py-4 theme-bg-secondary text-white rounded-3xl font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-              <span>Get a Project Quote</span>
+              <span>Free 15‑Min Project Audit</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </motion.div>
@@ -86,7 +86,7 @@ const SoftwareDevelopment = () => {
               <div key={i} className="theme-card rounded-2xl p-6 shadow-lg border theme-border-secondary">
                 <s.icon className="w-10 h-10 theme-text-secondary mb-4" />
                 <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                <p className="text-gray-600">{s.description}</p>
+                <p className="text-gray-700">{s.description}</p>
               </div>
             ))}
           </div>

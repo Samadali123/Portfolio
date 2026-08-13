@@ -10,27 +10,27 @@ const TermsOfService = () => {
     {
       icon: Terminal,
       title: "1. Acceptance of Terms",
-      content: "By accessing and using the ASG Solutions website and services, you accept and agree to be bound by the terms and provision of this agreement. In addition, when using these particular services, you shall be subject to any posted guidelines or rules applicable to such services."
+      content: "By using ASG Solutions' site or services you agree to these terms. Specific services may have additional rules you must follow.",
     },
     {
       icon: UserCheck,
       title: "2. User Obligations",
-      content: "You agree to use our platform and services only for purposes that are permitted by these Terms and any applicable law or regulation. You are responsible for maintaining the confidentiality of any login credentials and are fully responsible for all activities that occur under your account."
+      content: "Use our services lawfully and keep your account secure. You are responsible for activity on accounts you control.",
     },
     {
       icon: Globe,
       title: "3. Intellectual Property",
-      content: "All content, software, and AI models provided by ASG Solutions are the exclusive property of ASG Solutions or its licensors. Users are granted a limited, non-transferable license to use our services according to the specific service agreement purchased."
+      content: "ASG Solutions and its licensors retain ownership of software, content, and models we deliver. Customers receive usage rights as defined in service agreements.",
     },
     {
       icon: Scale,
       title: "4. Limitation of Liability",
-      content: "ASG Solutions shall not be liable for any indirect, incidental, special, or consequential damages resulting from the use or the inability to use our cloud or AI services. We provide our platform on an 'as is' and 'as available' basis without any warranties of any kind."
+      content: "We provide services in good faith but are not liable for indirect or consequential losses. Specific liability limits are set in contracts.",
     },
     {
       icon: Gavel,
       title: "5. Termination",
-      content: "We reserve the right to terminate or suspend access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. All provisions of the Terms shall survive termination."
+      content: "We may suspend or end access for breach of terms. Certain obligations (like payment and confidentiality) continue after termination.",
     }
   ];
 
@@ -49,7 +49,7 @@ const TermsOfService = () => {
             Terms of <span className="theme-text-secondary">Service</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Please read these terms carefully before using our services. They govern your relationship with ASG Solutions' platform and infrastructure.
+            Please read these terms carefully. They describe how we work together when you use ASG Solutions' services and platform.
           </p>
           <div className="mt-8 flex items-center justify-center gap-6 text-sm text-black font-medium">
             <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 theme-text-secondary" /> Legally Binding</span>
