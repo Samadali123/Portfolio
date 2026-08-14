@@ -63,11 +63,12 @@ const Home = () => {
     },
     {
       icon: BarChart3,
-      title: 'Data Driven Solutions',
+      title: 'Data Solutions',
       description: 'Turn raw data into decisions: automated pipelines, dashboards, and predictive models that increase ROI.',
-      path: '/services/data-driven-solutions',
+      path: '/services/data-solutions',
       gradient: 'from-orange-500 to-yellow-400',
     },
+
   ];
 
 

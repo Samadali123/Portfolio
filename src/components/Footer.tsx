@@ -19,7 +19,7 @@ const Footer = () => {
       { name: 'AI Automation', path: '/services/ai-solutions' },
       { name: 'Business Consultation', path: '/services/business-consultation' },
       { name: 'Custom Software Development', path: '/services/software-development' },
-      { name: 'Data Driven Solutions', path: '/services/data-driven-solutions' },
+      { name: 'Data Solutions', path: '/services/data-solutions' },
     ],
   };
 

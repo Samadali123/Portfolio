@@ -184,7 +184,7 @@ const Chatbot = () => {
     <>
       {/* Subtle Blur Overlay */}
       <div
-        className={`fixed inset-0 z-[80] bg-black/5 backdrop-blur-[2px] transition-opacity duration-300 pointer-events-none ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'
+        className={`fixed inset-0 z-80 bg-black/5 backdrop-blur-[2px] transition-opacity duration-300 pointer-events-none ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0'
           }`}
         onClick={() => setIsOpen(false)}
       />
@@ -192,7 +192,7 @@ const Chatbot = () => {
       {/* Floating Toggle Button - Disappears when chat is open */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`hover:cursor-pointer fixed bottom-5 right-5 z-[100] w-14 h-14 md:bottom-6 md:right-6 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 shadow-xl bg-[#0C4B2A] hover:scale-105 active:scale-95 ${isOpen ? 'opacity-0 scale-0 pointer-events-none' : 'opacity-100 scale-100'
+        className={`hover:cursor-pointer fixed bottom-5 right-5 z-100 w-14 h-14 md:bottom-6 md:right-6 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-300 shadow-xl bg-[#0C4B2A] hover:scale-105 active:scale-95 ${isOpen ? 'opacity-0 scale-0 pointer-events-none' : 'opacity-100 scale-100'
           }`}
         aria-label="Open Chat"
       >
@@ -204,11 +204,11 @@ const Chatbot = () => {
 
       {/* Chat Window */}
       <div
-        className={`fixed inset-0 z-[90] flex items-end justify-center md:items-end md:justify-end md:p-6 transition-all duration-500 pointer-events-none ${isOpen ? 'opacity-100' : 'opacity-0'
+        className={`fixed inset-0 z-90 flex items-end justify-center md:items-end md:justify-end md:p-6 transition-all duration-500 pointer-events-none ${isOpen ? 'opacity-100' : 'opacity-0'
           }`}
       >
         <div
-          className={`h-[100dvh] w-full bg-white shadow-2xl flex flex-col overflow-hidden transition-all duration-500 md:h-[650px] md:max-h-[85vh] md:w-[420px] md:rounded-3xl ${isOpen ? 'translate-y-0 scale-100' : 'translate-y-12 scale-95'
+          className={`h-dvh w-full bg-white shadow-2xl flex flex-col overflow-hidden transition-all duration-500 md:h-[650px] md:max-h-[85vh] md:w-[420px] md:rounded-3xl ${isOpen ? 'translate-y-0 scale-100' : 'translate-y-12 scale-95'
             } ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
         >
           {/* Header */}

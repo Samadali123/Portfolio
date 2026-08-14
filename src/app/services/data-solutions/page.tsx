@@ -3,7 +3,7 @@ import DataSolutions from '@/views/services/DataSolutions';
 
 export const metadata: Metadata = {
   title: 'Data Solutions',
-  description: 'Turn your raw data into decisions that drive growth. Real-time analytics, automated pipelines, and dashboards.',
+  description: 'Reliable data pipelines, dashboards, and analytics that turn raw data into decisions that save money and increase revenue.',
 };
 
 export default function Page() {
