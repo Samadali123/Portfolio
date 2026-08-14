@@ -5,7 +5,7 @@ import ClientShell from './ClientShell';
 export const metadata: Metadata = {
   metadataBase: new URL('https://asgsolutions.dev'),
   title: {
-    default: 'ASG Solutions — AI Automation & ROI-driven Software',
+    default: 'ASG Solutions AI Automation & ROI-driven Software',
     template: '%s | ASG Solutions',
   },
   description: 'AI Automation, Agents, and custom software that cut costs, save time, and increase revenue. Book a free 15‑min AI audit to find quick, measurable wins.',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     apple: '/favicon.png',
   },
   openGraph: {
-    title: 'ASG Solutions — AI Automation & ROI-driven Software',
+    title: 'ASG Solutions AI Automation & ROI-driven Software',
     description: 'AI-first automation, agents, and custom software that cut costs, save time, and increase revenue. Free 15‑min AI audit to uncover quick wins.',
     siteName: 'ASG Solutions',
     type: 'website',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ASG Solutions — AI Automation & ROI-driven Software',
+    title: 'ASG Solutions AI Automation & ROI-driven Software',
     description: 'AI-first automation and software that delivers measurable savings and revenue growth. Book a free 15‑min AI audit.',
     images: ['/favicon.png'],
   },
