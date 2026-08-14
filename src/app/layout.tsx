@@ -5,35 +5,33 @@ import ClientShell from './ClientShell';
 export const metadata: Metadata = {
   metadataBase: new URL('https://asgsolutions.dev'),
   title: {
-    default: 'ASG Solutions | Smart Cloud, AI & Software Solutions',
+    default: 'ASG Solutions — AI Automation & ROI-driven Software',
     template: '%s | ASG Solutions',
   },
-  description: 'Smart cloud, AI, and software solutions for growing businesses.',
+  description: 'AI Automation, Agents, and custom software that cut costs, save time, and increase revenue. Book a free 15‑min AI audit to find quick, measurable wins.',
   applicationName: 'ASG Solutions',
   icons: {
-    icon: [
-      { url: '../assets/images/faviconlogo.png', type: 'image/png' },
-    ],
-    shortcut: '../assets/images/faviconlogo.png',
-    apple: '../assets/images/faviconlogo.png',
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
   },
   openGraph: {
-    title: 'ASG Solutions | Smart Cloud, AI & Software Solutions',
-    description: 'Smart cloud, AI, and software solutions for growing businesses.',
+    title: 'ASG Solutions — AI Automation & ROI-driven Software',
+    description: 'AI-first automation, agents, and custom software that cut costs, save time, and increase revenue. Free 15‑min AI audit to uncover quick wins.',
     siteName: 'ASG Solutions',
     type: 'website',
     images: [
       {
-        url: '../assets/images/faviconlogo.png',
+        url: '/favicon.png',
         alt: 'ASG Solutions logo',
       },
     ],
   },
   twitter: {
-    card: 'summary',
-    title: 'ASG Solutions | Smart Cloud, AI & Software Solutions',
-    description: 'Smart cloud, AI, and software solutions for growing businesses.',
-    images: ['../assets/images/faviconlogo.png'],
+    card: 'summary_large_image',
+    title: 'ASG Solutions — AI Automation & ROI-driven Software',
+    description: 'AI-first automation and software that delivers measurable savings and revenue growth. Book a free 15‑min AI audit.',
+    images: ['/favicon.png'],
   },
 };
 
